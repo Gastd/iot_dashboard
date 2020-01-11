@@ -8676,6 +8676,13 @@ Navbar logo
     width: 1rem;
     height: 1rem; }
 
+.btn-floating {
+  position: fixed;
+  z-index: 1030;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  border-radius: 50%; }
+
 .calendar {
   display: block;
   font-size: 0.8203125rem;
