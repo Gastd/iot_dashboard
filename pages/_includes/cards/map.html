@@ -1,12 +1,13 @@
 {% assign map = include.map | default: "world" %}
-<div class="card">
+{% assign height = include.height | default: 20 %}
+{% assign width = include.width | default: 20 %}
+<div class="card" style="height: {{ height }}rem; width:{{ width }}rem;" >
    {% if include.title %}
    <div class="card-header">
       <h3 class="card-title">{{ include.title }}</h3>
    </div>
    {% endif %}
    <div class="card-body">
-
-      {% include ui/map.html map-id=map color="blue" %}
+      {% include ui/openstreet-map.html map-id=map color="blue" height=include.height width=include.width %}
    </div>
 </div>
