@@ -7,673 +7,434 @@
 * Copyright 2018-2019 codecalm.net Paweł Kuna
 * Licensed under MIT (https://tabler.io/license)
 -->
-
 <html lang="en">
-<head>
-   <meta charset="utf-8"/>
-   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-   <meta http-equiv="Content-Language" content="en"/>
-
-   <meta name="msapplication-TileColor" content="#206bc4"/>
-   <meta name="theme-color" content="#206bc4"/>
-
-   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-   <meta name="apple-mobile-web-app-capable" content="yes"/>
-   <meta name="mobile-web-app-capable" content="yes"/>
-   <meta name="HandheldFriendly" content="True"/>
-   <meta name="MobileOptimized" content="320"/>
-   <meta name="robots" content="noindex,nofollow,noarchive"/>
-
-   <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
-   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
-
-   <title>Data Tables - Localizador de Carga - </title>
-
-   
-
-   
-
-   
-<!-- Libs CSS -->
-
-
-<link href="./node_modules/jqvmap/dist/jqvmap.min.css?1582143489" rel="stylesheet"/>
-
-
-
-<link href="./node_modules/selectize/dist/css/selectize.css?1582143489" rel="stylesheet"/>
-
-
-
-<link href="./node_modules/@fullcalendar/core/main.min.css?1582143489" rel="stylesheet"/>
-
-<link href="./node_modules/@fullcalendar/daygrid/main.min.css?1582143489" rel="stylesheet"/>
-
-<link href="./node_modules/@fullcalendar/timegrid/main.min.css?1582143489" rel="stylesheet"/>
-
-<link href="./node_modules/@fullcalendar/list/main.min.css?1582143489" rel="stylesheet"/>
-
-
-
-
-<!-- Tabler Core -->
-<link href="./tmp-dist/css/tabler.css?1582143489" rel="stylesheet"/>
-
-<!-- Tabler Plugins -->
-
-<link href="./tmp-dist/css/tabler-flags.css?1582143489" rel="stylesheet"/>
-
-<link href="./tmp-dist/css/tabler-payments.css?1582143489" rel="stylesheet"/>
-
-<link href="./tmp-dist/css/tabler-buttons.css?1582143489" rel="stylesheet"/>
-
-
-</head>
-
-
-<body class="antialiased">
-
-	<div class="wrapper">
-
-	
-
-	<div class="content">
-		
-
-
-
-		
-			<header class="topnav">
-	<div class="navbar navbar-expand-lg navbar-light">
-		<div class="container">
-			
-<ul class="navbar-nav flex-wrap">
-	
-	
-
-	<li class="nav-item">
-		<a class="nav-link" href="./index.html" >
-			<span class="nav-icon">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-
-			</span>
-
-			Dashboard
-
-			
-		</a>
-
-		
-	</li>
-	
-</ul>
-
-
-			<div class="navbar-search d-none d-xl-block">
-	<form action="." method="get">
-		
-
-
-<div class="input-icon">
-	
-		
-<span class="input-icon-addon">
-	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-
-</span>
-
-	
-
-	<input type="text" class="form-control" placeholder="Search&hellip;">
-
-	
-</div>
-
-	</form>
-</div>
-
-		</div>
-	</div>
-</header>
-
-		
-
-		<div class="content-page">
-			<main class="container my-4 flex-fill">
-				
-
-
-				<div class="card">
-	<div class="card-header">
-		<h3 class="card-title">Invoices</h3>
-	</div>
-	<div class="card-body border-bottom py-3">
-
-		<div class="d-flex">
-			<div class="mb-0">
-				Show
-				<div class="mx-2 d-inline-block">
-					<input type="text" class="form-control form-control-sm" value="8" size="3">
-				</div>
-				entries
-			</div>
-
-			<div class="mb-0 ml-auto">
-				Search:
-				<div class="ml-2 d-inline-block">
-					<input type="text" class="form-control form-control-sm">
-				</div>
-			</div>
-		</div>
-
-	</div>
-	<div class="table-responsive">
-		<table class="table card-table table-vcenter text-nowrap datatable">
-			<thead>
-			<tr>
-				<th class="w-1p"><input class="form-check-input m-0 align-middle" type="checkbox"></th>
-				<th class="w-1p">No. <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm text-dark icon-thick"><polyline points="18 15 12 9 6 15"></polyline></svg>
-</th>
-				<th>Invoice Subject <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-</th>
-				<th>Client <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-</th>
-				<th>VAT No. <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-</th>
-				<th>Created <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-</th>
-				<th>Status <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-</th>
-				<th>Price <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-</th>
-				<th></th>
-				<th></th>
-			</tr>
-			</thead>
-
-			<tbody>
-			
-			<tr>
-				<td><input class="form-check-input m-0 align-middle" type="checkbox"></td>
-				<td><span class="text-muted">001401</span></td>
-				<td><a href="invoice.html" class="text-reset" tabindex="-1">Design Works</a></td>
-				<td>
-					<span class="flag flag-us"></span>
-
-					Carlson Limited
-				</td>
-				<td>
-					87956621
-				</td>
-				<td>
-					15 Dec 2017
-				</td>
-				<td>
-					<span class="status-icon bg-success"></span> Paid
-				</td>
-				<td>$887</td>
-
-				<td class="text-right">
-					<button class="btn btn-secondary btn-sm align-text-top">Manage</button>
-					<span class="dropdown ml-1">
-						<button class="btn btn-secondary btn-sm dropdown-toggle align-text-top" data-toggle="dropdown">Actions</button>
-						<div class="dropdown-menu">
-   
-      
-      <a class="dropdown-item" href="#">
-         
-         Action
-         
-      </a>
-      <a class="dropdown-item" href="#">
-         Another action
-      </a>
-      
-      
-      
-   
-</div>
-
-					</span>
-				</td>
-				<td>
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm float-right"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-
-				</td>
-			</tr>
-			
-			<tr>
-				<td><input class="form-check-input m-0 align-middle" type="checkbox"></td>
-				<td><span class="text-muted">001402</span></td>
-				<td><a href="invoice.html" class="text-reset" tabindex="-1">UX Wireframes</a></td>
-				<td>
-					<span class="flag flag-gb"></span>
-
-					Adobe
-				</td>
-				<td>
-					87956421
-				</td>
-				<td>
-					12 Apr 2017
-				</td>
-				<td>
-					<span class="status-icon bg-warning"></span> Pending
-				</td>
-				<td>$1200</td>
-
-				<td class="text-right">
-					<button class="btn btn-secondary btn-sm align-text-top">Manage</button>
-					<span class="dropdown ml-1">
-						<button class="btn btn-secondary btn-sm dropdown-toggle align-text-top" data-toggle="dropdown">Actions</button>
-						<div class="dropdown-menu">
-   
-      
-      <a class="dropdown-item" href="#">
-         
-         Action
-         
-      </a>
-      <a class="dropdown-item" href="#">
-         Another action
-      </a>
-      
-      
-      
-   
-</div>
-
-					</span>
-				</td>
-				<td>
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm float-right"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-
-				</td>
-			</tr>
-			
-			<tr>
-				<td><input class="form-check-input m-0 align-middle" type="checkbox"></td>
-				<td><span class="text-muted">001403</span></td>
-				<td><a href="invoice.html" class="text-reset" tabindex="-1">New Dashboard</a></td>
-				<td>
-					<span class="flag flag-de"></span>
-
-					Bluewolf
-				</td>
-				<td>
-					87952621
-				</td>
-				<td>
-					23 Oct 2017
-				</td>
-				<td>
-					<span class="status-icon bg-warning"></span> Pending
-				</td>
-				<td>$534</td>
-
-				<td class="text-right">
-					<button class="btn btn-secondary btn-sm align-text-top">Manage</button>
-					<span class="dropdown ml-1">
-						<button class="btn btn-secondary btn-sm dropdown-toggle align-text-top" data-toggle="dropdown">Actions</button>
-						<div class="dropdown-menu">
-   
-      
-      <a class="dropdown-item" href="#">
-         
-         Action
-         
-      </a>
-      <a class="dropdown-item" href="#">
-         Another action
-      </a>
-      
-      
-      
-   
-</div>
-
-					</span>
-				</td>
-				<td>
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm float-right"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-
-				</td>
-			</tr>
-			
-			<tr>
-				<td><input class="form-check-input m-0 align-middle" type="checkbox"></td>
-				<td><span class="text-muted">001404</span></td>
-				<td><a href="invoice.html" class="text-reset" tabindex="-1">Landing Page</a></td>
-				<td>
-					<span class="flag flag-br"></span>
-
-					Salesforce
-				</td>
-				<td>
-					87953421
-				</td>
-				<td>
-					2 Sep 2017
-				</td>
-				<td>
-					<span class="status-icon bg-secondary"></span> Due in 2 Weeks
-				</td>
-				<td>$1500</td>
-
-				<td class="text-right">
-					<button class="btn btn-secondary btn-sm align-text-top">Manage</button>
-					<span class="dropdown ml-1">
-						<button class="btn btn-secondary btn-sm dropdown-toggle align-text-top" data-toggle="dropdown">Actions</button>
-						<div class="dropdown-menu">
-   
-      
-      <a class="dropdown-item" href="#">
-         
-         Action
-         
-      </a>
-      <a class="dropdown-item" href="#">
-         Another action
-      </a>
-      
-      
-      
-   
-</div>
-
-					</span>
-				</td>
-				<td>
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm float-right"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-
-				</td>
-			</tr>
-			
-			<tr>
-				<td><input class="form-check-input m-0 align-middle" type="checkbox"></td>
-				<td><span class="text-muted">001405</span></td>
-				<td><a href="invoice.html" class="text-reset" tabindex="-1">Marketing Templates</a></td>
-				<td>
-					<span class="flag flag-pl"></span>
-
-					Printic
-				</td>
-				<td>
-					87956621
-				</td>
-				<td>
-					29 Jan 2018
-				</td>
-				<td>
-					<span class="status-icon bg-danger"></span> Paid Today
-				</td>
-				<td>$648</td>
-
-				<td class="text-right">
-					<button class="btn btn-secondary btn-sm align-text-top">Manage</button>
-					<span class="dropdown ml-1">
-						<button class="btn btn-secondary btn-sm dropdown-toggle align-text-top" data-toggle="dropdown">Actions</button>
-						<div class="dropdown-menu">
-   
-      
-      <a class="dropdown-item" href="#">
-         
-         Action
-         
-      </a>
-      <a class="dropdown-item" href="#">
-         Another action
-      </a>
-      
-      
-      
-   
-</div>
-
-					</span>
-				</td>
-				<td>
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm float-right"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-
-				</td>
-			</tr>
-			
-			<tr>
-				<td><input class="form-check-input m-0 align-middle" type="checkbox"></td>
-				<td><span class="text-muted">001406</span></td>
-				<td><a href="invoice.html" class="text-reset" tabindex="-1">Sales Presentation</a></td>
-				<td>
-					<span class="flag flag-br"></span>
-
-					Tabdaq
-				</td>
-				<td>
-					87956621
-				</td>
-				<td>
-					4 Feb 2018
-				</td>
-				<td>
-					<span class="status-icon bg-secondary"></span> Due in 3 Weeks
-				</td>
-				<td>$300</td>
-
-				<td class="text-right">
-					<button class="btn btn-secondary btn-sm align-text-top">Manage</button>
-					<span class="dropdown ml-1">
-						<button class="btn btn-secondary btn-sm dropdown-toggle align-text-top" data-toggle="dropdown">Actions</button>
-						<div class="dropdown-menu">
-   
-      
-      <a class="dropdown-item" href="#">
-         
-         Action
-         
-      </a>
-      <a class="dropdown-item" href="#">
-         Another action
-      </a>
-      
-      
-      
-   
-</div>
-
-					</span>
-				</td>
-				<td>
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm float-right"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-
-				</td>
-			</tr>
-			
-			<tr>
-				<td><input class="form-check-input m-0 align-middle" type="checkbox"></td>
-				<td><span class="text-muted">001407</span></td>
-				<td><a href="invoice.html" class="text-reset" tabindex="-1">Logo & Print</a></td>
-				<td>
-					<span class="flag flag-us"></span>
-
-					Apple
-				</td>
-				<td>
-					87956621
-				</td>
-				<td>
-					22 Mar 2018
-				</td>
-				<td>
-					<span class="status-icon bg-success"></span> Paid Today
-				</td>
-				<td>$2500</td>
-
-				<td class="text-right">
-					<button class="btn btn-secondary btn-sm align-text-top">Manage</button>
-					<span class="dropdown ml-1">
-						<button class="btn btn-secondary btn-sm dropdown-toggle align-text-top" data-toggle="dropdown">Actions</button>
-						<div class="dropdown-menu">
-   
-      
-      <a class="dropdown-item" href="#">
-         
-         Action
-         
-      </a>
-      <a class="dropdown-item" href="#">
-         Another action
-      </a>
-      
-      
-      
-   
-</div>
-
-					</span>
-				</td>
-				<td>
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm float-right"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-
-				</td>
-			</tr>
-			
-			<tr>
-				<td><input class="form-check-input m-0 align-middle" type="checkbox"></td>
-				<td><span class="text-muted">001408</span></td>
-				<td><a href="invoice.html" class="text-reset" tabindex="-1">Icons</a></td>
-				<td>
-					<span class="flag flag-pl"></span>
-
-					Tookapic
-				</td>
-				<td>
-					87956621
-				</td>
-				<td>
-					13 May 2018
-				</td>
-				<td>
-					<span class="status-icon bg-success"></span> Paid Today
-				</td>
-				<td>$940</td>
-
-				<td class="text-right">
-					<button class="btn btn-secondary btn-sm align-text-top">Manage</button>
-					<span class="dropdown ml-1">
-						<button class="btn btn-secondary btn-sm dropdown-toggle align-text-top" data-toggle="dropdown">Actions</button>
-						<div class="dropdown-menu">
-   
-      
-      <a class="dropdown-item" href="#">
-         
-         Action
-         
-      </a>
-      <a class="dropdown-item" href="#">
-         Another action
-      </a>
-      
-      
-      
-   
-</div>
-
-					</span>
-				</td>
-				<td>
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm float-right"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-
-				</td>
-			</tr>
-			
-			</tbody>
-		</table>
-	</div>
-	<div class="card-footer d-flex align-items-center border-top-0">
-		<p class="m-0 text-muted">Showing <span>1</span> to <span>8</span> of <span>16</span> entries</p>
-		
-
-<ul class="pagination m-0 ml-auto">
-   <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">
-         
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polyline points="15 18 9 12 15 6"></polyline></svg>
- Prev
-         
-      </a>
-   </li>
-
-   
-   <li class="page-item"><a class="page-link" href="#">1</a></li>
-   
-   <li class="page-item active"><a class="page-link" href="#">2</a></li>
-   
-   <li class="page-item"><a class="page-link" href="#">3</a></li>
-   
-   <li class="page-item"><a class="page-link" href="#">4</a></li>
-   
-   <li class="page-item"><a class="page-link" href="#">5</a></li>
-   
-
-   <li class="page-item">
-      <a class="page-link" href="#">
-
-         
-            Next <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polyline points="9 18 15 12 9 6"></polyline></svg>
-
-         
-      </a>
-   </li>
-</ul>
-
-	</div>
-</div>
-
-
-			</main>
-		</div>
-	</div>
-</div>
-
-
-	<!-- Libs JS -->
-
-
-
-<script src="./node_modules/jquery/dist/jquery.slim.min.js?1582143489"></script>
-
-
-
-
-
-<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js?1582143489"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Tabler Core -->
-<script src="./tmp-dist/js/tabler.js?1582143489"></script>
-
-	
-
-
-	
-
-</body>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta http-equiv="Content-Language" content="en"/>
+    <meta name="msapplication-TileColor" content="#206bc4"/>
+    <meta name="theme-color" content="#206bc4"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="robots" content="noindex,nofollow,noarchive"/>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+    <title>Data Tables - Localizador de Carga - </title>
+    <!-- Libs CSS -->
+    <link href="./dist/libs/jqvmap/dist/jqvmap.min.css?1582144308" rel="stylesheet"/>
+    <link href="./dist/libs/selectize/dist/css/selectize.css?1582144308" rel="stylesheet"/>
+    <link href="./dist/libs/fullcalendar/core/main.min.css?1582144308" rel="stylesheet"/>
+    <link href="./dist/libs/fullcalendar/daygrid/main.min.css?1582144308" rel="stylesheet"/>
+    <link href="./dist/libs/fullcalendar/timegrid/main.min.css?1582144308" rel="stylesheet"/>
+    <link href="./dist/libs/fullcalendar/list/main.min.css?1582144308" rel="stylesheet"/>
+    <!-- Tabler Core -->
+    <link href="./dist/css/tabler.min.css?1582144308" rel="stylesheet"/>
+    <!-- Tabler Plugins -->
+    <link href="./dist/css/tabler-flags.min.css?1582144308" rel="stylesheet"/>
+    <link href="./dist/css/tabler-payments.min.css?1582144308" rel="stylesheet"/>
+    <link href="./dist/css/tabler-buttons.min.css?1582144308" rel="stylesheet"/>
+  </head>
+  <body class="antialiased">
+    <div class="wrapper">
+      <div class="content">
+        <header class="topnav">
+          <div class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+              <ul class="navbar-nav flex-wrap">
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html" >
+                    <span class="nav-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    </span>
+                    Dashboard
+                  </a>
+                </li>
+              </ul>
+              <div class="navbar-search d-none d-xl-block">
+                <form action="." method="get">
+                  <div class="input-icon">
+                    <span class="input-icon-addon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Search&hellip;">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="content-page">
+          <main class="container my-4 flex-fill">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Invoices</h3>
+              </div>
+              <div class="card-body border-bottom py-3">
+                <div class="d-flex">
+                  <div class="mb-0">
+                    Show
+                    <div class="mx-2 d-inline-block">
+                      <input type="text" class="form-control form-control-sm" value="8" size="3">
+                    </div>
+                    entries
+                  </div>
+                  <div class="mb-0 ml-auto">
+                    Search:
+                    <div class="ml-2 d-inline-block">
+                      <input type="text" class="form-control form-control-sm">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table card-table table-vcenter text-nowrap datatable">
+                  <thead>
+                    <tr>
+                      <th class="w-1p"><input class="form-check-input m-0 align-middle" type="checkbox"></th>
+                      <th class="w-1p">No. <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm text-dark icon-thick"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                      </th>
+                      <th>Invoice Subject <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                      </th>
+                      <th>Client <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                      </th>
+                      <th>VAT No. <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                      </th>
+                      <th>Created <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                      </th>
+                      <th>Status <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                      </th>
+                      <th>Price <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                      </th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input class="form-check-input m-0 align-middle" type="checkbox"></td>
+                      <td><span class="text-muted">001401</span></td>
+                      <td><a href="invoice.html" class="text-reset" tabindex="-1">Design Works</a></td>
+                      <td>
+                        <span class="flag flag-us"></span>
+                        Carlson Limited
+                      </td>
+                      <td>
+                        87956621
+                      </td>
+                      <td>
+                        15 Dec 2017
+                      </td>
+                      <td>
+                        <span class="status-icon bg-success"></span> Paid
+                      </td>
+                      <td>$887</td>
+                      <td class="text-right">
+                        <button class="btn btn-secondary btn-sm align-text-top">Manage</button>
+                        <span class="dropdown ml-1">
+                          <button class="btn btn-secondary btn-sm dropdown-toggle align-text-top" data-toggle="dropdown">Actions</button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">
+                              Action
+                            </a>
+                            <a class="dropdown-item" href="#">
+                              Another action
+                            </a>
+                          </div>
+                        </span>
+                      </td>
+                      <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm float-right"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input class="form-check-input m-0 align-middle" type="checkbox"></td>
+                      <td><span class="text-muted">001402</span></td>
+                      <td><a href="invoice.html" class="text-reset" tabindex="-1">UX Wireframes</a></td>
+                      <td>
+                        <span class="flag flag-gb"></span>
+                        Adobe
+                      </td>
+                      <td>
+                        87956421
+                      </td>
+                      <td>
+                        12 Apr 2017
+                      </td>
+                      <td>
+                        <span class="status-icon bg-warning"></span> Pending
+                      </td>
+                      <td>$1200</td>
+                      <td class="text-right">
+                        <button class="btn btn-secondary btn-sm align-text-top">Manage</button>
+                        <span class="dropdown ml-1">
+                          <button class="btn btn-secondary btn-sm dropdown-toggle align-text-top" data-toggle="dropdown">Actions</button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">
+                              Action
+                            </a>
+                            <a class="dropdown-item" href="#">
+                              Another action
+                            </a>
+                          </div>
+                        </span>
+                      </td>
+                      <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm float-right"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input class="form-check-input m-0 align-middle" type="checkbox"></td>
+                      <td><span class="text-muted">001403</span></td>
+                      <td><a href="invoice.html" class="text-reset" tabindex="-1">New Dashboard</a></td>
+                      <td>
+                        <span class="flag flag-de"></span>
+                        Bluewolf
+                      </td>
+                      <td>
+                        87952621
+                      </td>
+                      <td>
+                        23 Oct 2017
+                      </td>
+                      <td>
+                        <span class="status-icon bg-warning"></span> Pending
+                      </td>
+                      <td>$534</td>
+                      <td class="text-right">
+                        <button class="btn btn-secondary btn-sm align-text-top">Manage</button>
+                        <span class="dropdown ml-1">
+                          <button class="btn btn-secondary btn-sm dropdown-toggle align-text-top" data-toggle="dropdown">Actions</button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">
+                              Action
+                            </a>
+                            <a class="dropdown-item" href="#">
+                              Another action
+                            </a>
+                          </div>
+                        </span>
+                      </td>
+                      <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm float-right"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input class="form-check-input m-0 align-middle" type="checkbox"></td>
+                      <td><span class="text-muted">001404</span></td>
+                      <td><a href="invoice.html" class="text-reset" tabindex="-1">Landing Page</a></td>
+                      <td>
+                        <span class="flag flag-br"></span>
+                        Salesforce
+                      </td>
+                      <td>
+                        87953421
+                      </td>
+                      <td>
+                        2 Sep 2017
+                      </td>
+                      <td>
+                        <span class="status-icon bg-secondary"></span> Due in 2 Weeks
+                      </td>
+                      <td>$1500</td>
+                      <td class="text-right">
+                        <button class="btn btn-secondary btn-sm align-text-top">Manage</button>
+                        <span class="dropdown ml-1">
+                          <button class="btn btn-secondary btn-sm dropdown-toggle align-text-top" data-toggle="dropdown">Actions</button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">
+                              Action
+                            </a>
+                            <a class="dropdown-item" href="#">
+                              Another action
+                            </a>
+                          </div>
+                        </span>
+                      </td>
+                      <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm float-right"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input class="form-check-input m-0 align-middle" type="checkbox"></td>
+                      <td><span class="text-muted">001405</span></td>
+                      <td><a href="invoice.html" class="text-reset" tabindex="-1">Marketing Templates</a></td>
+                      <td>
+                        <span class="flag flag-pl"></span>
+                        Printic
+                      </td>
+                      <td>
+                        87956621
+                      </td>
+                      <td>
+                        29 Jan 2018
+                      </td>
+                      <td>
+                        <span class="status-icon bg-danger"></span> Paid Today
+                      </td>
+                      <td>$648</td>
+                      <td class="text-right">
+                        <button class="btn btn-secondary btn-sm align-text-top">Manage</button>
+                        <span class="dropdown ml-1">
+                          <button class="btn btn-secondary btn-sm dropdown-toggle align-text-top" data-toggle="dropdown">Actions</button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">
+                              Action
+                            </a>
+                            <a class="dropdown-item" href="#">
+                              Another action
+                            </a>
+                          </div>
+                        </span>
+                      </td>
+                      <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm float-right"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input class="form-check-input m-0 align-middle" type="checkbox"></td>
+                      <td><span class="text-muted">001406</span></td>
+                      <td><a href="invoice.html" class="text-reset" tabindex="-1">Sales Presentation</a></td>
+                      <td>
+                        <span class="flag flag-br"></span>
+                        Tabdaq
+                      </td>
+                      <td>
+                        87956621
+                      </td>
+                      <td>
+                        4 Feb 2018
+                      </td>
+                      <td>
+                        <span class="status-icon bg-secondary"></span> Due in 3 Weeks
+                      </td>
+                      <td>$300</td>
+                      <td class="text-right">
+                        <button class="btn btn-secondary btn-sm align-text-top">Manage</button>
+                        <span class="dropdown ml-1">
+                          <button class="btn btn-secondary btn-sm dropdown-toggle align-text-top" data-toggle="dropdown">Actions</button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">
+                              Action
+                            </a>
+                            <a class="dropdown-item" href="#">
+                              Another action
+                            </a>
+                          </div>
+                        </span>
+                      </td>
+                      <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm float-right"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input class="form-check-input m-0 align-middle" type="checkbox"></td>
+                      <td><span class="text-muted">001407</span></td>
+                      <td><a href="invoice.html" class="text-reset" tabindex="-1">Logo & Print</a></td>
+                      <td>
+                        <span class="flag flag-us"></span>
+                        Apple
+                      </td>
+                      <td>
+                        87956621
+                      </td>
+                      <td>
+                        22 Mar 2018
+                      </td>
+                      <td>
+                        <span class="status-icon bg-success"></span> Paid Today
+                      </td>
+                      <td>$2500</td>
+                      <td class="text-right">
+                        <button class="btn btn-secondary btn-sm align-text-top">Manage</button>
+                        <span class="dropdown ml-1">
+                          <button class="btn btn-secondary btn-sm dropdown-toggle align-text-top" data-toggle="dropdown">Actions</button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">
+                              Action
+                            </a>
+                            <a class="dropdown-item" href="#">
+                              Another action
+                            </a>
+                          </div>
+                        </span>
+                      </td>
+                      <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm float-right"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input class="form-check-input m-0 align-middle" type="checkbox"></td>
+                      <td><span class="text-muted">001408</span></td>
+                      <td><a href="invoice.html" class="text-reset" tabindex="-1">Icons</a></td>
+                      <td>
+                        <span class="flag flag-pl"></span>
+                        Tookapic
+                      </td>
+                      <td>
+                        87956621
+                      </td>
+                      <td>
+                        13 May 2018
+                      </td>
+                      <td>
+                        <span class="status-icon bg-success"></span> Paid Today
+                      </td>
+                      <td>$940</td>
+                      <td class="text-right">
+                        <button class="btn btn-secondary btn-sm align-text-top">Manage</button>
+                        <span class="dropdown ml-1">
+                          <button class="btn btn-secondary btn-sm dropdown-toggle align-text-top" data-toggle="dropdown">Actions</button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">
+                              Action
+                            </a>
+                            <a class="dropdown-item" href="#">
+                              Another action
+                            </a>
+                          </div>
+                        </span>
+                      </td>
+                      <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sm float-right"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer d-flex align-items-center border-top-0">
+                <p class="m-0 text-muted">Showing <span>1</span> to <span>8</span> of <span>16</span> entries</p>
+                <ul class="pagination m-0 ml-auto">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                      Prev
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      Next <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+    <!-- Libs JS -->
+    <script src="./dist/libs/jquery/dist/jquery.slim.min.js?1582144308"></script>
+    <script src="./dist/libs/bootstrap/dist/js/bootstrap.bundle.min.js?1582144308"></script>
+    <!-- Tabler Core -->
+    <script src="./dist/js/tabler.min.js?1582144308"></script>
+  </body>
 </html>
