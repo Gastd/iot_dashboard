@@ -1,0 +1,1854 @@
+<!doctype html>
+<!--
+* Localizador de Carga - 
+* @version v1.0.0-alpha
+* @link https://github.com/tabler/tabler
+* Copyright 2018-2019 The Tabler Authors
+* Copyright 2018-2019 codecalm.net Paweł Kuna
+* Licensed under MIT (https://tabler.io/license)
+-->
+
+<html lang="en">
+<head>
+   <meta charset="utf-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+   <meta http-equiv="Content-Language" content="en"/>
+
+   <meta name="msapplication-TileColor" content="#206bc4"/>
+   <meta name="theme-color" content="#206bc4"/>
+
+   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+   <meta name="apple-mobile-web-app-capable" content="yes"/>
+   <meta name="mobile-web-app-capable" content="yes"/>
+   <meta name="HandheldFriendly" content="True"/>
+   <meta name="MobileOptimized" content="320"/>
+   <meta name="robots" content="noindex,nofollow,noarchive"/>
+
+   <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+
+   <title>Charts - Localizador de Carga - </title>
+
+   
+
+   
+
+   
+<!-- Libs CSS -->
+
+
+<link href="./node_modules/jqvmap/dist/jqvmap.min.css?1582143489" rel="stylesheet"/>
+
+
+
+<link href="./node_modules/selectize/dist/css/selectize.css?1582143489" rel="stylesheet"/>
+
+
+
+<link href="./node_modules/@fullcalendar/core/main.min.css?1582143489" rel="stylesheet"/>
+
+<link href="./node_modules/@fullcalendar/daygrid/main.min.css?1582143489" rel="stylesheet"/>
+
+<link href="./node_modules/@fullcalendar/timegrid/main.min.css?1582143489" rel="stylesheet"/>
+
+<link href="./node_modules/@fullcalendar/list/main.min.css?1582143489" rel="stylesheet"/>
+
+
+
+
+<!-- Tabler Core -->
+<link href="./tmp-dist/css/tabler.css?1582143489" rel="stylesheet"/>
+
+<!-- Tabler Plugins -->
+
+<link href="./tmp-dist/css/tabler-flags.css?1582143489" rel="stylesheet"/>
+
+<link href="./tmp-dist/css/tabler-payments.css?1582143489" rel="stylesheet"/>
+
+<link href="./tmp-dist/css/tabler-buttons.css?1582143489" rel="stylesheet"/>
+
+
+</head>
+
+
+<body class="antialiased">
+
+	<div class="wrapper">
+
+	
+
+	<div class="content">
+		
+
+
+
+		
+			<header class="topnav">
+	<div class="navbar navbar-expand-lg navbar-light">
+		<div class="container">
+			
+<ul class="navbar-nav flex-wrap">
+	
+	
+
+	<li class="nav-item">
+		<a class="nav-link" href="./index.html" >
+			<span class="nav-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+
+			</span>
+
+			Dashboard
+
+			
+		</a>
+
+		
+	</li>
+	
+</ul>
+
+
+			<div class="navbar-search d-none d-xl-block">
+	<form action="." method="get">
+		
+
+
+<div class="input-icon">
+	
+		
+<span class="input-icon-addon">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+
+</span>
+
+	
+
+	<input type="text" class="form-control" placeholder="Search&hellip;">
+
+	
+</div>
+
+	</form>
+</div>
+
+		</div>
+	</div>
+</header>
+
+		
+
+		<div class="content-page">
+			<main class="container my-4 flex-fill">
+				
+<!-- Page title -->
+<div class="page-title-box">
+
+	<div class="row align-items-center">
+		<div class="col-auto">
+			
+			<h2 class="page-title">
+				Charts
+			</h2>
+		</div>
+
+		
+
+		
+	</div>
+</div>
+
+
+
+				<div class="row">
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks"  style="outline: 1px solid red" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks2"  style="outline: 1px solid red" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks3"  style="outline: 1px solid red" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks4"  style="outline: 1px solid red" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks5"  style="outline: 1px solid red" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks6"  style="outline: 1px solid red" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks7"  style="outline: 1px solid red" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks8" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks9" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks10" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks11" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-total-sales" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-tasks" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-line-stroke" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-stepline" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-temperature" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-area" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-area-spline" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-area-spline-stacked" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-spline" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-scatter" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   <div class="col-lg-6 col-xl-4">
+      <div class="card">
+         
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-combination" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+</div>
+
+			</main>
+		</div>
+	</div>
+</div>
+
+
+	<!-- Libs JS -->
+
+
+
+<script src="./node_modules/jquery/dist/jquery.slim.min.js?1582143489"></script>
+
+
+
+
+
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js?1582143489"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script src="./node_modules/apexcharts/dist/apexcharts.min.js?1582143489"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Tabler Core -->
+<script src="./tmp-dist/js/tabler.js?1582143489"></script>
+
+	<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks"] = new ApexCharts(document.getElementById('chart-completion-tasks'), {
+			chart: {
+				type: "bar",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [{
+				name: "Tasks completion",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			}],
+			xaxis: {
+				type: 'datetime', 
+			},
+			labels: [...Array(7).keys()].map(n => '2019-09-' + (n + 1)),
+			colors: ["#206bc4"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks2"] = new ApexCharts(document.getElementById('chart-completion-tasks2'), {
+			chart: {
+				type: "line",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "Tasks completion",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			}],
+			xaxis: {
+				type: 'datetime', 
+			},
+			labels: [...Array(7).keys()].map(n => '2019-09-' + (n + 1)),
+			colors: ["#206bc4"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks3"] = new ApexCharts(document.getElementById('chart-completion-tasks3'), {
+			chart: {
+				type: "area",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: .16,
+				type: 'solid'
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "Tasks completion",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			}],
+			xaxis: {
+				type: 'datetime', 
+			},
+			labels: [...Array(7).keys()].map(n => '2019-09-' + (n + 1)),
+			colors: ["#206bc4"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks4"] = new ApexCharts(document.getElementById('chart-completion-tasks4'), {
+			chart: {
+				type: "line",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "straight",
+			},
+			series: [{
+				name: "Tasks completion",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			}],
+			xaxis: {
+				type: 'datetime', 
+			},
+			labels: [...Array(7).keys()].map(n => '2019-09-' + (n + 1)),
+			colors: ["#206bc4"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks5"] = new ApexCharts(document.getElementById('chart-completion-tasks5'), {
+			chart: {
+				type: "line",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "stepline",
+			},
+			series: [{
+				name: "Tasks completion",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			}],
+			xaxis: {
+				type: 'datetime', 
+			},
+			labels: [...Array(7).keys()].map(n => '2019-09-' + (n + 1)),
+			colors: ["#206bc4"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks6"] = new ApexCharts(document.getElementById('chart-completion-tasks6'), {
+			chart: {
+				type: "bar",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			plotOptions: {
+				bar: {
+			 		horizontal: true,
+				}
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [{
+				name: "Tasks completion",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			}],
+			xaxis: {
+				type: 'datetime', 
+			},
+			labels: [...Array(7).keys()].map(n => '2019-09-' + (n + 1)),
+			colors: ["#206bc4"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks7"] = new ApexCharts(document.getElementById('chart-completion-tasks7'), {
+			chart: {
+				type: "line",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			dataLabels: {
+				enabled: true,
+			},
+			fill: {
+				opacity: 1,
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "Tasks completion",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			}],
+			xaxis: {
+				type: 'datetime', 
+			},
+			labels: [...Array(7).keys()].map(n => '2019-09-' + (n + 1)),
+			colors: ["#206bc4"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks8"] = new ApexCharts(document.getElementById('chart-completion-tasks8'), {
+			chart: {
+				type: "bar",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [{
+				name: "",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			},{
+				name: "",
+				data: [113, 42, 65, 54, 76, 65, 35]
+			}],
+			colors: ["#206bc4", "#fa4654"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks9"] = new ApexCharts(document.getElementById('chart-completion-tasks9'), {
+			chart: {
+				type: "bar",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+				stacked: true,
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [{
+				name: "",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			},{
+				name: "",
+				data: [113, 42, 65, 54, 76, 65, 35]
+			}],
+			colors: ["#206bc4", "#fa4654"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks10"] = new ApexCharts(document.getElementById('chart-completion-tasks10'), {
+			chart: {
+				type: "area",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: .16,
+				type: 'solid'
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			},{
+				name: "",
+				data: [113, 42, 65, 54, 76, 65, 35]
+			}],
+			colors: ["#206bc4", "#fa4654"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks11"] = new ApexCharts(document.getElementById('chart-completion-tasks11'), {
+			chart: {
+				type: "area",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+				stacked: true,
+			},
+			fill: {
+				opacity: .16,
+				type: 'solid'
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			},{
+				name: "",
+				data: [113, 42, 65, 54, 76, 65, 35]
+			}],
+			colors: ["#206bc4", "#fa4654"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-total-sales"] = new ApexCharts(document.getElementById('chart-total-sales'), {
+			chart: {
+				type: "donut",
+				fontFamily: 'inherit',
+				height: 240,
+				sparkline: {
+					enabled: true
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [44, 55, 35, 12],
+			labels: ["Direct", "Affilliate", "Sponsored", "E-mail"],
+			colors: ["#206bc4", "#5eba00", "#fa4654", "#fab005"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-tasks"] = new ApexCharts(document.getElementById('chart-tasks'), {
+			chart: {
+				type: "line",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "New",
+				data: [0, 0, 1, 2, 21, 9, 12, 10, 31, 13, 65, 10, 12, 6, 4, 3, 0]
+			},{
+				name: "Completed",
+				data: [0, 0, 1, 2, 7, 5, 6, 8, 24, 7, 12, 5, 6, 3, 2, 2, 0]
+			},{
+				name: "Closed",
+				data: [0, 0, 1, 0, 2, 0, 1, 0, 2, 3, 0, 2, 3, 2, 1, 0, 0]
+			}],
+			xaxis: {
+				categories: ["M", "T", "W", "T", "F", "S", "S", "M", "T", "W", "T", "F", "S", "S", "M", "T", "W"],
+			},
+			colors: ["#206bc4", "#7bd235", "#ff922b"],
+			legend: {
+				show: false,
+			},
+			tooltip: {
+				enabled: false
+			},
+			point: {
+				show: false
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-line-stroke"] = new ApexCharts(document.getElementById('chart-line-stroke'), {
+			chart: {
+				type: "line",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "straight",
+			},
+			series: [{
+				name: "Development",
+				data: [8, 10, 11, 12, 20, 27, 30]
+			},{
+				name: "Marketing",
+				data: [3, 16, 17, 19, 20, 30, 30]
+			},{
+				name: "Sales",
+				data: [7, 10, 11, 18, 18, 18, 24]
+			}],
+			xaxis: {
+				categories: ["2013", "2014", "2015", "2016", "2017", "2018", "2019"],
+			},
+			colors: ["#ff922b", "#206bc4", "#5eba00"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-stepline"] = new ApexCharts(document.getElementById('chart-stepline'), {
+			chart: {
+				type: "line",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "stepline",
+			},
+			series: [{
+				name: "Development",
+				data: [34, 44, 54, 21, 12, 43, 33, 23, 66, 66, 58]
+			}],
+			colors: ["#ff922b"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-temperature"] = new ApexCharts(document.getElementById('chart-temperature'), {
+			chart: {
+				type: "line",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "Tokyo",
+				data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+			},{
+				name: "London",
+				data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+			}],
+			dataLabels: {
+				enabled: true,
+			},
+			xaxis: {
+				categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+			},
+			colors: ["#206bc4", "#5eba00"],
+			legend: {
+				show: false,
+			},
+			markers: {
+				size: 2
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-area"] = new ApexCharts(document.getElementById('chart-area'), {
+			chart: {
+				type: "area",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: .16,
+				type: 'solid'
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "Maximum",
+				data: [11, 8, 15, 18, 19, 17]
+			},{
+				name: "Minimum",
+				data: [7, 7, 5, 7, 9, 12]
+			}],
+			xaxis: {
+				categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+			},
+			colors: ["#206bc4", "#f66d9b"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-area-spline"] = new ApexCharts(document.getElementById('chart-area-spline'), {
+			chart: {
+				type: "area",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: .16,
+				type: 'solid'
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "Maximum",
+				data: [11, 8, 15, 18, 19, 17]
+			},{
+				name: "Minimum",
+				data: [7, 7, 5, 7, 9, 12]
+			}],
+			xaxis: {
+				categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+			},
+			colors: ["#206bc4", "#f66d9b"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-area-spline-stacked"] = new ApexCharts(document.getElementById('chart-area-spline-stacked'), {
+			chart: {
+				type: "area",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+				stacked: true,
+			},
+			fill: {
+				opacity: .16,
+				type: 'solid'
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "Maximum",
+				data: [11, 8, 15, 18, 19, 17]
+			},{
+				name: "Minimum",
+				data: [7, 7, 5, 7, 9, 12]
+			}],
+			xaxis: {
+				categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+			},
+			colors: ["#206bc4", "#f66d9b"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-spline"] = new ApexCharts(document.getElementById('chart-spline'), {
+			chart: {
+				type: "line",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "Hestavollane",
+				data: [0.2, 0.8, 0.8, 0.8, 1, 1.3, 1.5, 2.9, 1.9, 2.6, 1.6, 3, 4, 3.6, 4.5, 4.2, 4.5, 4.5, 4, 3.1, 2.7, 4, 2.7, 2.3, 2.3, 4.1, 7.7, 7.1, 5.6, 6.1, 5.8, 8.6, 7.2, 9, 10.9, 11.5, 11.6, 11.1, 12, 12.3, 10.7, 9.4, 9.8, 9.6, 9.8, 9.5, 8.5, 7.4, 7.6]
+			},{
+				name: "Vik",
+				data: [0, 0, 0.6, 0.9, 0.8, 0.2, 0, 0, 0, 0.1, 0.6, 0.7, 0.8, 0.6, 0.2, 0, 0.1, 0.3, 0.3, 0, 0.1, 0, 0, 0, 0.2, 0.1, 0, 0.3, 0, 0.1, 0.2, 0.1, 0.3, 0.3, 0, 3.1, 3.1, 2.5, 1.5, 1.9, 2.1, 1, 2.3, 1.9, 1.2, 0.7, 1.3, 0.4, 0.3]
+			}],
+			xaxis: {
+				categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+			},
+			colors: ["#206bc4", "#5eba00"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-scatter"] = new ApexCharts(document.getElementById('chart-scatter'), {
+			chart: {
+				type: "scatter",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [{
+				name: "Maximum",
+				data: [11, 8, 15, 18, 19, 17]
+			},{
+				name: "Minimum",
+				data: [7, 7, 5, 7, 9, 12]
+			}],
+			xaxis: {
+				categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+			},
+			colors: ["#206bc4", "#f66d9b"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-combination"] = new ApexCharts(document.getElementById('chart-combination'), {
+			chart: {
+				type: "bar",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [{
+				name: "Development",
+				data: [30, 20, 50, 40, 60, 50]
+			},{
+				name: "Marketing",
+				data: [200, 130, 90, 240, 130, 220]
+			},{
+				name: "Sales",
+				data: [300, 200, 160, 400, 250, 250]
+			},{
+				name: "Sales",
+				data: [200, 130, 90, 240, 130, 220]
+			}],
+			xaxis: {
+				categories: ["2013", "2014", "2015", "2016", "2017", "2018"],
+			},
+			colors: ["#5eba00", "#f66d9b", "#5eba00", "#206bc4"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+
+
+	
+
+</body>
+</html>

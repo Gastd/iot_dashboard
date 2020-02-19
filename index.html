@@ -1,0 +1,294 @@
+<!doctype html>
+<!--
+* Localizador de Carga - 
+* @version v1.0.0-alpha
+* @link https://github.com/tabler/tabler
+* Copyright 2018-2019 The Tabler Authors
+* Copyright 2018-2019 codecalm.net Paweł Kuna
+* Licensed under MIT (https://tabler.io/license)
+-->
+
+<html lang="en">
+<head>
+   <meta charset="utf-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+   <meta http-equiv="Content-Language" content="en"/>
+
+   <meta name="msapplication-TileColor" content="#206bc4"/>
+   <meta name="theme-color" content="#206bc4"/>
+
+   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+   <meta name="apple-mobile-web-app-capable" content="yes"/>
+   <meta name="mobile-web-app-capable" content="yes"/>
+   <meta name="HandheldFriendly" content="True"/>
+   <meta name="MobileOptimized" content="320"/>
+   <meta name="robots" content="noindex,nofollow,noarchive"/>
+
+   <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+
+   <title>Dashboard - Localizador de Carga - </title>
+
+   
+
+   
+
+   
+<!-- Libs CSS -->
+
+
+<link href="./node_modules/jqvmap/dist/jqvmap.min.css?1582143489" rel="stylesheet"/>
+
+
+
+<link href="./node_modules/selectize/dist/css/selectize.css?1582143489" rel="stylesheet"/>
+
+
+
+<link href="./node_modules/@fullcalendar/core/main.min.css?1582143489" rel="stylesheet"/>
+
+<link href="./node_modules/@fullcalendar/daygrid/main.min.css?1582143489" rel="stylesheet"/>
+
+<link href="./node_modules/@fullcalendar/timegrid/main.min.css?1582143489" rel="stylesheet"/>
+
+<link href="./node_modules/@fullcalendar/list/main.min.css?1582143489" rel="stylesheet"/>
+
+
+
+
+<!-- Tabler Core -->
+<link href="./tmp-dist/css/tabler.css?1582143489" rel="stylesheet"/>
+
+<!-- Tabler Plugins -->
+
+<link href="./tmp-dist/css/tabler-flags.css?1582143489" rel="stylesheet"/>
+
+<link href="./tmp-dist/css/tabler-payments.css?1582143489" rel="stylesheet"/>
+
+<link href="./tmp-dist/css/tabler-buttons.css?1582143489" rel="stylesheet"/>
+
+
+</head>
+
+
+<body class="antialiased">
+
+	<div class="wrapper">
+
+	
+
+	<div class="content">
+		
+
+
+
+		
+			<header class="topnav">
+	<div class="navbar navbar-expand-lg navbar-light">
+		<div class="container">
+			
+<ul class="navbar-nav flex-wrap">
+	
+	
+
+	<li class="nav-item active">
+		<a class="nav-link" href="./index.html" >
+			<span class="nav-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+
+			</span>
+
+			Dashboard
+
+			
+		</a>
+
+		
+	</li>
+	
+</ul>
+
+
+			<div class="navbar-search d-none d-xl-block">
+	<form action="." method="get">
+		
+
+
+<div class="input-icon">
+	
+		
+<span class="input-icon-addon">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+
+</span>
+
+	
+
+	<input type="text" class="form-control" placeholder="Search&hellip;">
+
+	
+</div>
+
+	</form>
+</div>
+
+		</div>
+	</div>
+</header>
+
+		
+
+		<div class="content-page">
+			<main class="container my-4 flex-fill">
+				
+
+
+				<div class="col-lg-6">
+    
+
+
+<div class="card" style="height: 37rem; width:70rem;" >
+   
+   <div class="card-header">
+      <h3 class="card-title">Map</h3>
+   </div>
+   
+   <div class="card-body">
+      
+
+
+
+
+
+<!-- <title>OpenLayers Simplest Example</title> -->
+<body onload="init();">
+    <div id="map-world" style="height:100%; width:100%;"></div>
+    <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+    <script src="https://www.openstreetmap.org/openlayers/OpenStreetMap.js"></script>
+    <script>
+        var map; //complex object of type OpenLayers.Map
+
+        function init() {
+            map = new OpenLayers.Map ("map-world", {
+                controls:[
+                    new OpenLayers.Control.Navigation(),
+                    new OpenLayers.Control.PanZoomBar(),
+                    new OpenLayers.Control.LayerSwitcher(),
+                    new OpenLayers.Control.Attribution()],
+                maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34),
+                maxResolution: 156543.0399,
+                numZoomLevels: 19,
+                units: 'm',
+                projection: new OpenLayers.Projection("EPSG:900913"),
+                displayProjection: new OpenLayers.Projection("EPSG:4326")
+            } );
+
+            // Define the map layer
+            // Here we use a predefined layer that will be kept up to date with URL changes
+            layerMapnik = new OpenLayers.Layer.OSM.Mapnik("Mapnik");
+            map.addLayer(layerMapnik);
+            var transportmap = new  OpenLayers.Layer.OSM.TransportMap("TransportMap");
+            map.addLayer(transportmap);
+            layerCycleMap = new OpenLayers.Layer.OSM.CycleMap("CycleMap");
+            map.addLayer(layerCycleMap);
+            layerMarkers = new OpenLayers.Layer.Markers("Markers");
+            map.addLayer(layerMarkers);
+
+            // Add the Layer with the GPX Track
+            var lgpx = new OpenLayers.Layer.Vector("Lakeside cycle ride", {
+                strategies: [new OpenLayers.Strategy.Fixed()],
+                protocol: new OpenLayers.Protocol.HTTP({
+                    url: "exploration.kml",
+                    format: new OpenLayers.Format.KML({
+                                extractStyles: true, 
+                                extractAttributes: true
+                        }),
+                }),
+                style: {strokeColor: "green", strokeWidth: 5, strokeOpacity: 0.75},
+                projection: new OpenLayers.Projection("EPSG:4326")
+            });
+            map.addLayer(lgpx);
+
+            // Add a Layer with Marker
+            var size = new OpenLayers.Size(21, 25);
+            var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+            var icon1 = new OpenLayers.Icon('https://www.openstreetmap.org/openlayers/img/marker.png',size,offset);
+            var icon2 = new OpenLayers.Icon('https://www.openstreetmap.org/openlayers/img/marker.png',size,offset);
+
+            // Start position for the map (hardcoded here for simplicity,
+            // but maybe you want to get this from the URL params)
+            var lat=-23.912734;
+            var lon=-46.228116;
+            var zoom=11;
+            var lonLat = new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
+            map.setCenter(lonLat, zoom);
+            
+            // begin
+            var lat1=-23.98621333420948;
+            var lon1=-46.26471449151783;
+            var lonLat1 = new OpenLayers.LonLat(lon1, lat1).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
+            layerMarkers.addMarker(new OpenLayers.Marker(lonLat1,icon1));
+            
+            // end
+            var lat2=-23.80898400476298;
+            var lon2=-46.09552471690758;
+            var lonLat2 = new OpenLayers.LonLat(lon2, lat2).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
+            layerMarkers.addMarker(new OpenLayers.Marker(lonLat2,icon2));
+        }
+    </script>
+</body>
+
+   </div>
+</div>
+
+</div>
+
+
+			</main>
+		</div>
+	</div>
+</div>
+
+
+	<!-- Libs JS -->
+
+
+
+<script src="./node_modules/jquery/dist/jquery.slim.min.js?1582143489"></script>
+
+
+
+
+
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js?1582143489"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Tabler Core -->
+<script src="./tmp-dist/js/tabler.js?1582143489"></script>
+
+	
+
+
+	
+
+</body>
+</html>

@@ -1,0 +1,2788 @@
+<!doctype html>
+<!--
+* Localizador de Carga - 
+* @version v1.0.0-alpha
+* @link https://github.com/tabler/tabler
+* Copyright 2018-2019 The Tabler Authors
+* Copyright 2018-2019 codecalm.net Paweł Kuna
+* Licensed under MIT (https://tabler.io/license)
+-->
+
+<html lang="en">
+<head>
+   <meta charset="utf-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+   <meta http-equiv="Content-Language" content="en"/>
+
+   <meta name="msapplication-TileColor" content="#206bc4"/>
+   <meta name="theme-color" content="#206bc4"/>
+
+   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+   <meta name="apple-mobile-web-app-capable" content="yes"/>
+   <meta name="mobile-web-app-capable" content="yes"/>
+   <meta name="HandheldFriendly" content="True"/>
+   <meta name="MobileOptimized" content="320"/>
+   <meta name="robots" content="noindex,nofollow,noarchive"/>
+
+   <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+
+   <title>Localizador de Carga - </title>
+
+   
+
+   
+
+   
+<!-- Libs CSS -->
+
+
+<link href="./node_modules/jqvmap/dist/jqvmap.min.css?1582143489" rel="stylesheet"/>
+
+
+
+<link href="./node_modules/selectize/dist/css/selectize.css?1582143489" rel="stylesheet"/>
+
+
+
+<link href="./node_modules/@fullcalendar/core/main.min.css?1582143489" rel="stylesheet"/>
+
+<link href="./node_modules/@fullcalendar/daygrid/main.min.css?1582143489" rel="stylesheet"/>
+
+<link href="./node_modules/@fullcalendar/timegrid/main.min.css?1582143489" rel="stylesheet"/>
+
+<link href="./node_modules/@fullcalendar/list/main.min.css?1582143489" rel="stylesheet"/>
+
+
+
+
+<!-- Tabler Core -->
+<link href="./tmp-dist/css/tabler.css?1582143489" rel="stylesheet"/>
+
+<!-- Tabler Plugins -->
+
+<link href="./tmp-dist/css/tabler-flags.css?1582143489" rel="stylesheet"/>
+
+<link href="./tmp-dist/css/tabler-payments.css?1582143489" rel="stylesheet"/>
+
+<link href="./tmp-dist/css/tabler-buttons.css?1582143489" rel="stylesheet"/>
+
+
+</head>
+
+
+<body class="antialiased">
+
+	<div class="wrapper">
+
+	
+
+	<div class="content">
+		
+
+
+
+		
+			<header class="topnav">
+	<div class="navbar navbar-expand-lg navbar-light">
+		<div class="container">
+			
+<ul class="navbar-nav flex-wrap">
+	
+	
+
+	<li class="nav-item">
+		<a class="nav-link" href="./index.html" >
+			<span class="nav-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+
+			</span>
+
+			Dashboard
+
+			
+		</a>
+
+		
+	</li>
+	
+</ul>
+
+
+			<div class="navbar-search d-none d-xl-block">
+	<form action="." method="get">
+		
+
+
+<div class="input-icon">
+	
+		
+<span class="input-icon-addon">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+
+</span>
+
+	
+
+	<input type="text" class="form-control" placeholder="Search&hellip;">
+
+	
+</div>
+
+	</form>
+</div>
+
+		</div>
+	</div>
+</header>
+
+		
+
+		<div class="content-page">
+			<main class="container my-4 flex-fill">
+				
+
+
+				<div class="row">
+  <div class="col-md-6 col-xl-4">
+    
+
+<div class="card">
+  <div class="card-body p-3 d-flex align-items-center">
+    
+    <span class="bg-red text-white stamp mr-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+</span>
+    
+
+    
+
+    <div class="mr-3 lh-sm">
+      <div class="strong">
+        1,700 
+        
+      </div>
+      <div class="text-muted">Users</div>
+    </div>
+
+    
+    <div class="ml-auto">
+      
+
+
+
+
+
+
+
+
+<div class="chart-sparkline" id="sparkline-43"></div>
+
+
+
+    </div>
+    
+  </div>
+</div>
+
+  </div>
+  <div class="col-md-6 col-xl-4">
+    
+
+<div class="card">
+  <div class="card-body p-3 d-flex align-items-center">
+    
+    <span class="bg-blue text-white stamp mr-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+</span>
+    
+
+    
+
+    <div class="mr-3 lh-sm">
+      <div class="strong">
+        1,700 
+        
+      </div>
+      <div class="text-muted">Users</div>
+    </div>
+
+    
+    <div class="ml-auto">
+      
+
+
+
+
+
+
+
+
+<div class="chart-sparkline" id="sparkline-44"></div>
+
+
+
+    </div>
+    
+  </div>
+</div>
+
+  </div>
+
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>completion-tasks</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks"  style="outline: 1px solid red" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>completion-tasks2</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks2"  style="outline: 1px solid red" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>completion-tasks3</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks3"  style="outline: 1px solid red" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>completion-tasks4</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks4"  style="outline: 1px solid red" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>completion-tasks5</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks5"  style="outline: 1px solid red" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>completion-tasks6</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks6"  style="outline: 1px solid red" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>completion-tasks7</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks7"  style="outline: 1px solid red" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>completion-tasks8</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks8" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>completion-tasks9</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks9" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>completion-tasks10</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks10" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>completion-tasks11</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-completion-tasks11" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>total-sales</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-total-sales" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>tasks</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-tasks" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>line-stroke</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-line-stroke" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>stepline</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-stepline" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>temperature</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-temperature" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>area</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-area" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>area-spline</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-area-spline" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>area-spline-stacked</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-area-spline-stacked" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>spline</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-spline" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>scatter</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-scatter" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-md-6 col-xl-4">
+    <div class="card">
+      <div class="card-body">
+        
+        <p>combination</p>
+        
+
+
+
+
+
+
+
+
+
+<div id="chart-combination" ></div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+   <div class="col-12">
+      <div class="card">
+         <div class="card-body">
+            
+
+
+
+
+
+
+
+
+
+<div id="chart-tasks-overview"  style="outline: 1px solid red" ></div>
+
+
+
+
+
+
+
+
+
+
+         </div>
+      </div>
+   </div>
+   <div class="col-4">
+      <div class="card">
+   <div class="card-body">
+      
+
+<div class="dropdown float-right">
+   <a href="#" class="card-drop" data-toggle="dropdown" aria-expanded="false">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+
+   </a>
+   <div class="dropdown-menu dropdown-menu-right">
+      
+      <a href="#" class="dropdown-item">Import</a>
+      
+      <a href="#" class="dropdown-item">Export</a>
+      
+      <a href="#" class="dropdown-item">Download</a>
+      
+      <a href="#" class="dropdown-item">Another action</a>
+      
+   </div>
+</div>
+
+      <h3 class="card-title">Total sales</h3>
+
+      
+
+
+
+
+
+
+
+
+
+<div id="chart-total-sales" ></div>
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+<div id="chart-campaigns" ></div>
+
+
+
+
+
+
+
+
+
+
+   </div>
+</div>
+
+   </div>
+   <div class="col-8"></div>
+</div>
+<div class="row">
+   <div class="col-md-6">
+      
+
+
+<div class="card">
+    <div class="card-body">
+        <div class="card-title">Basic info</div>
+        <div class="mb-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon mr-2 text-muted"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+
+            Went to: <strong>University of Ljubljana</strong>
+        </div>
+        <div class="mb-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon mr-2 text-muted"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+
+            Worked at: <strong>Devpulse</strong>
+        </div>
+        <div class="mb-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon mr-2 text-muted"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+
+            Lives in: <strong>Šentilj v Slov. Goricah, Slovenia</strong>
+        </div>
+       <div class="mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon mr-2 text-muted"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+
+          From: <strong><span class="flag flag-si"></span>
+ Slovenia</strong>
+       </div>
+       <div class="mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon mr-2 text-muted"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+
+          Birth date: <strong>13/01/1985</strong>
+       </div>
+       <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon mr-2 text-muted"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+
+          Time zone: <strong>Europe/Ljubljana</strong>
+       </div>
+    </div>
+</div>
+
+      
+
+<div class="card">
+   <div class="card-header">
+      <h3 class="card-title">Top users</h3>
+   </div>
+   <div class="card-body">
+      <div class="row mb-n3">
+         
+         
+         
+         <div class="col-6 row row-sm mb-3 align-items-center">
+            <a href="#" class="col-auto">
+               <span class="avatar" style="background-image: url(./static/avatars/000m.jpg)">
+  <span class="badge bg-red"></span>
+</span>
+
+            </a>
+            <div class="col text-truncate">
+               <a href="#" class="text-body d-block text-truncate">Paweł Kuna</a>
+               <small class="d-block text-muted text-truncate mt-n1">2 days ago</small>
+            </div>
+         </div>
+         
+         
+         <div class="col-6 row row-sm mb-3 align-items-center">
+            <a href="#" class="col-auto">
+               <span class="avatar">
+  <span class="badge bg-x"></span>
+JL</span>
+
+            </a>
+            <div class="col text-truncate">
+               <a href="#" class="text-body d-block text-truncate">Jeffie Lewzey</a>
+               <small class="d-block text-muted text-truncate mt-n1">3 days ago</small>
+            </div>
+         </div>
+         
+         
+         <div class="col-6 row row-sm mb-3 align-items-center">
+            <a href="#" class="col-auto">
+               <span class="avatar" style="background-image: url(./static/avatars/002m.jpg)"></span>
+
+            </a>
+            <div class="col text-truncate">
+               <a href="#" class="text-body d-block text-truncate">Mallory Hulme</a>
+               <small class="d-block text-muted text-truncate mt-n1">today</small>
+            </div>
+         </div>
+         
+         
+         <div class="col-6 row row-sm mb-3 align-items-center">
+            <a href="#" class="col-auto">
+               <span class="avatar" style="background-image: url(./static/avatars/003m.jpg)">
+  <span class="badge bg-green"></span>
+</span>
+
+            </a>
+            <div class="col text-truncate">
+               <a href="#" class="text-body d-block text-truncate">Dunn Slane</a>
+               <small class="d-block text-muted text-truncate mt-n1">6 days ago</small>
+            </div>
+         </div>
+         
+         
+         <div class="col-6 row row-sm mb-3 align-items-center">
+            <a href="#" class="col-auto">
+               <span class="avatar" style="background-image: url(./static/avatars/000f.jpg)">
+  <span class="badge bg-red"></span>
+</span>
+
+            </a>
+            <div class="col text-truncate">
+               <a href="#" class="text-body d-block text-truncate">Emmy Levet</a>
+               <small class="d-block text-muted text-truncate mt-n1">3 days ago</small>
+            </div>
+         </div>
+         
+         
+         <div class="col-6 row row-sm mb-3 align-items-center">
+            <a href="#" class="col-auto">
+               <span class="avatar" style="background-image: url(./static/avatars/001f.jpg)">
+  <span class="badge bg-yellow"></span>
+</span>
+
+            </a>
+            <div class="col text-truncate">
+               <a href="#" class="text-body d-block text-truncate">Maryjo Lebarree</a>
+               <small class="d-block text-muted text-truncate mt-n1">2 days ago</small>
+            </div>
+         </div>
+         
+         
+         <div class="col-6 row row-sm mb-3 align-items-center">
+            <a href="#" class="col-auto">
+               <span class="avatar">
+  <span class="badge bg-x"></span>
+EP</span>
+
+            </a>
+            <div class="col text-truncate">
+               <a href="#" class="text-body d-block text-truncate">Egan Poetz</a>
+               <small class="d-block text-muted text-truncate mt-n1">4 days ago</small>
+            </div>
+         </div>
+         
+         
+         <div class="col-6 row row-sm mb-3 align-items-center">
+            <a href="#" class="col-auto">
+               <span class="avatar" style="background-image: url(./static/avatars/002f.jpg)">
+  <span class="badge bg-yellow"></span>
+</span>
+
+            </a>
+            <div class="col text-truncate">
+               <a href="#" class="text-body d-block text-truncate">Kellie Skingley</a>
+               <small class="d-block text-muted text-truncate mt-n1">6 days ago</small>
+            </div>
+         </div>
+         
+         
+         <div class="col-6 row row-sm mb-3 align-items-center">
+            <a href="#" class="col-auto">
+               <span class="avatar" style="background-image: url(./static/avatars/003f.jpg)">
+  <span class="badge bg-x"></span>
+</span>
+
+            </a>
+            <div class="col text-truncate">
+               <a href="#" class="text-body d-block text-truncate">Christabel Charlwood</a>
+               <small class="d-block text-muted text-truncate mt-n1">today</small>
+            </div>
+         </div>
+         
+         
+         <div class="col-6 row row-sm mb-3 align-items-center">
+            <a href="#" class="col-auto">
+               <span class="avatar">
+  <span class="badge bg-x"></span>
+HS</span>
+
+            </a>
+            <div class="col text-truncate">
+               <a href="#" class="text-body d-block text-truncate">Haskel Shelper</a>
+               <small class="d-block text-muted text-truncate mt-n1">yesterday</small>
+            </div>
+         </div>
+         
+      </div>
+   </div>
+</div>
+
+
+      <div class="card">
+         <div class="card-body">
+            <div><div class="stars">
+   <span class="star text-yellow">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+   <span class="star text-yellow">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+   <span class="star text-yellow">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+   <span class="star text-yellow">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+   <span class="star ">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+</div>
+</div>
+            <div><div class="stars">
+   <span class="star text-yellow">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+   <span class="star text-yellow">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+   <span class="star text-yellow">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+   <span class="star text-yellow">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+   <span class="star ">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+</div>
+</div>
+            <div><div class="stars">
+   <span class="star text-red">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+   <span class="star text-red">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+   <span class="star text-red">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+   <span class="star text-red">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+   <span class="star ">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+</div>
+</div>
+            <div><div class="stars">
+   <span class="star text-yellow">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-filled"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+   <span class="star text-yellow">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-filled"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+   <span class="star text-yellow">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-filled"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+   <span class="star text-yellow">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-filled"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+   <span class="star ">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+   </span>
+</div>
+</div>
+            <div><div class="stars">
+   <span class="star text-red">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+   </span>
+   <span class="star text-red">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+   </span>
+   <span class="star ">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+   </span>
+   <span class="star ">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+   </span>
+   <span class="star ">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+   </span>
+</div>
+</div>
+            <div><div class="stars">
+   <span class="star text-blue">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="10"></circle></svg>
+   </span>
+   <span class="star text-blue">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="10"></circle></svg>
+   </span>
+   <span class="star text-blue">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="10"></circle></svg>
+   </span>
+   <span class="star text-blue">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="10"></circle></svg>
+   </span>
+   <span class="star ">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="10"></circle></svg>
+   </span>
+</div>
+</div>
+         </div>
+      </div>
+   </div>
+   <div class="col-md-6">
+      
+
+
+
+<div class="card">
+   <div class="card-header">
+      <h3 class="card-title">Last commits</h3>
+   </div>
+   <div class="list list-row list-hoverable">
+      
+      
+         
+         <div class="list-item">
+            
+               <div><span class="badge bg-red"></span></div>
+            
+            <a href="#">
+               <span class="avatar" style="background-image: url(./static/avatars/000m.jpg)"></span>
+
+            </a>
+            <div class="text-truncate">
+               <a href="#" class="text-body d-block">Paweł Kuna</a>
+               
+               <small class="d-block text-muted text-truncate mt-n1">Change deprecated html tags to text decoration classes (#29604)</small>
+            </div>
+            
+               
+               <a href="#" class="list-item-actions"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon text-muted"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+</a>
+            
+         </div>
+      
+         
+         <div class="list-item">
+            
+               <div><span class="badge"></span></div>
+            
+            <a href="#">
+               <span class="avatar">JL</span>
+
+            </a>
+            <div class="text-truncate">
+               <a href="#" class="text-body d-block">Jeffie Lewzey</a>
+               
+               <small class="d-block text-muted text-truncate mt-n1">justify-content:between ⇒ justify-content:space-between (#29734)</small>
+            </div>
+            
+               
+               <a href="#" class="list-item-actions show"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon text-yellow"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+</a>
+            
+         </div>
+      
+         
+         <div class="list-item">
+            
+               <div><span class="badge bg-"></span></div>
+            
+            <a href="#">
+               <span class="avatar" style="background-image: url(./static/avatars/002m.jpg)"></span>
+
+            </a>
+            <div class="text-truncate">
+               <a href="#" class="text-body d-block">Mallory Hulme</a>
+               
+               <small class="d-block text-muted text-truncate mt-n1">Update change-version.js (#29736)</small>
+            </div>
+            
+               
+               <a href="#" class="list-item-actions"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon text-muted"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+</a>
+            
+         </div>
+      
+         
+         <div class="list-item">
+            
+               <div><span class="badge bg-green"></span></div>
+            
+            <a href="#">
+               <span class="avatar" style="background-image: url(./static/avatars/003m.jpg)"></span>
+
+            </a>
+            <div class="text-truncate">
+               <a href="#" class="text-body d-block">Dunn Slane</a>
+               
+               <small class="d-block text-muted text-truncate mt-n1">Regenerate package-lock.json (#29730)</small>
+            </div>
+            
+               
+               <a href="#" class="list-item-actions"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon text-muted"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+</a>
+            
+         </div>
+      
+         
+         <div class="list-item">
+            
+               <div><span class="badge bg-red"></span></div>
+            
+            <a href="#">
+               <span class="avatar" style="background-image: url(./static/avatars/000f.jpg)"></span>
+
+            </a>
+            <div class="text-truncate">
+               <a href="#" class="text-body d-block">Emmy Levet</a>
+               
+               <small class="d-block text-muted text-truncate mt-n1">Some minor text tweaks</small>
+            </div>
+            
+               
+               <a href="#" class="list-item-actions show"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon text-yellow"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+</a>
+            
+         </div>
+      
+         
+         <div class="list-item">
+            
+               <div><span class="badge bg-yellow"></span></div>
+            
+            <a href="#">
+               <span class="avatar" style="background-image: url(./static/avatars/001f.jpg)"></span>
+
+            </a>
+            <div class="text-truncate">
+               <a href="#" class="text-body d-block">Maryjo Lebarree</a>
+               
+               <small class="d-block text-muted text-truncate mt-n1">Link to versioned docs</small>
+            </div>
+            
+               
+               <a href="#" class="list-item-actions"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon text-muted"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+</a>
+            
+         </div>
+      
+         
+         <div class="list-item">
+            
+               <div><span class="badge"></span></div>
+            
+            <a href="#">
+               <span class="avatar">EP</span>
+
+            </a>
+            <div class="text-truncate">
+               <a href="#" class="text-body d-block">Egan Poetz</a>
+               
+               <small class="d-block text-muted text-truncate mt-n1">Copywriting edits</small>
+            </div>
+            
+               
+               <a href="#" class="list-item-actions"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon text-muted"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+</a>
+            
+         </div>
+      
+         
+         <div class="list-item">
+            
+               <div><span class="badge bg-yellow"></span></div>
+            
+            <a href="#">
+               <span class="avatar" style="background-image: url(./static/avatars/002f.jpg)"></span>
+
+            </a>
+            <div class="text-truncate">
+               <a href="#" class="text-body d-block">Kellie Skingley</a>
+               
+               <small class="d-block text-muted text-truncate mt-n1">Enable RFS for font resizing</small>
+            </div>
+            
+               
+               <a href="#" class="list-item-actions show"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon text-yellow"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+</a>
+            
+         </div>
+      
+   </div>
+</div>
+
+      
+
+
+
+<div class="card">
+   <div class="card-header">
+      <h3 class="card-title">Contacts</h3>
+   </div>
+   <div class="list list-row">
+      
+      
+         
+         <div class="list-item">
+            
+               <div><input type="checkbox" class="form-check-input"></div>
+            
+            <a href="#">
+               <span class="avatar" style="background-image: url(./static/avatars/003f.jpg)"></span>
+
+            </a>
+            <div class="text-truncate">
+               <a href="#" class="text-body d-block">Christabel Charlwood</a>
+               
+               <small class="d-block text-muted text-truncate mt-n1">Compressed Sass output support (#29702)</small>
+            </div>
+            
+         </div>
+      
+         
+         <div class="list-item">
+            
+               <div><input type="checkbox" class="form-check-input"></div>
+            
+            <a href="#">
+               <span class="avatar">HS</span>
+
+            </a>
+            <div class="text-truncate">
+               <a href="#" class="text-body d-block">Haskel Shelper</a>
+               
+               <small class="d-block text-muted text-truncate mt-n1">Set vertical-align on .form-check-input (#29521)</small>
+            </div>
+            
+         </div>
+      
+         
+         <div class="list-item">
+            
+               <div><input type="checkbox" class="form-check-input" checked></div>
+            
+            <a href="#">
+               <span class="avatar" style="background-image: url(./static/avatars/006m.jpg)"></span>
+
+            </a>
+            <div class="text-truncate">
+               <a href="#" class="text-body d-block">Lorry Mion</a>
+               
+               <small class="d-block text-muted text-truncate mt-n1">Keep themed appearance for print (#29714)</small>
+            </div>
+            
+         </div>
+      
+         
+         <div class="list-item">
+            
+               <div><input type="checkbox" class="form-check-input"></div>
+            
+            <a href="#">
+               <span class="avatar" style="background-image: url(./static/avatars/004f.jpg)"></span>
+
+            </a>
+            <div class="text-truncate">
+               <a href="#" class="text-body d-block">Leesa Beaty</a>
+               
+               <small class="d-block text-muted text-truncate mt-n1">Use double quotes in `.stylelintrc` (#29709)</small>
+            </div>
+            
+         </div>
+      
+         
+         <div class="list-item">
+            
+               <div><input type="checkbox" class="form-check-input" checked></div>
+            
+            <a href="#">
+               <span class="avatar" style="background-image: url(./static/avatars/007m.jpg)"></span>
+
+            </a>
+            <div class="text-truncate">
+               <a href="#" class="text-body d-block">Perren Keemar</a>
+               
+               <small class="d-block text-muted text-truncate mt-n1">Regenerate package-lock.json (#29695)</small>
+            </div>
+            
+         </div>
+      
+         
+         <div class="list-item">
+            
+               <div><input type="checkbox" class="form-check-input" checked></div>
+            
+            <a href="#">
+               <span class="avatar">SA</span>
+
+            </a>
+            <div class="text-truncate">
+               <a href="#" class="text-body d-block">Sunny Airey</a>
+               
+               <small class="d-block text-muted text-truncate mt-n1">Switch to the Coveralls Action (#29478)</small>
+            </div>
+            
+         </div>
+      
+         
+         <div class="list-item">
+            
+               <div><input type="checkbox" class="form-check-input"></div>
+            
+            <a href="#">
+               <span class="avatar" style="background-image: url(./static/avatars/009m.jpg)"></span>
+
+            </a>
+            <div class="text-truncate">
+               <a href="#" class="text-body d-block">Geoffry Flaunders</a>
+               
+               <small class="d-block text-muted text-truncate mt-n1">Fix npm audit vulnerability (#29677)</small>
+            </div>
+            
+         </div>
+      
+         
+         <div class="list-item">
+            
+               <div><input type="checkbox" class="form-check-input"></div>
+            
+            <a href="#">
+               <span class="avatar" style="background-image: url(./static/avatars/010m.jpg)"></span>
+
+            </a>
+            <div class="text-truncate">
+               <a href="#" class="text-body d-block">Thatcher Keel</a>
+               
+               <small class="d-block text-muted text-truncate mt-n1">config.yml: update popper.js to v1.16.0 (#29624)</small>
+            </div>
+            
+         </div>
+      
+   </div>
+</div>
+
+   </div>
+</div>
+
+
+			</main>
+		</div>
+	</div>
+</div>
+
+
+	<!-- Libs JS -->
+
+
+
+<script src="./node_modules/jquery/dist/jquery.slim.min.js?1582143489"></script>
+
+
+
+
+
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js?1582143489"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script src="./node_modules/apexcharts/dist/apexcharts.min.js?1582143489"></script>
+
+
+
+
+
+
+
+<script src="./node_modules/peity/jquery.peity.min.js?1582143489"></script>
+
+
+
+
+
+
+
+
+<!-- Tabler Core -->
+<script src="./tmp-dist/js/tabler.js?1582143489"></script>
+
+	<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		$().peity && $('#sparkline-43').text("20,40,30,40,60,80,70").peity("bar", {
+			width: 64,
+			height: 40,
+			stroke: "#fa4654",
+			strokeWidth: 2,
+			fill: ["#fa4654"],
+			padding: .2,
+			innerRadius: 17,
+		});
+	});
+</script>
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		$().peity && $('#sparkline-44').text("5,8,2,5,-1,3,5,3").peity("bar", {
+			width: 64,
+			height: 40,
+			stroke: "#206bc4",
+			strokeWidth: 2,
+			fill: ["#206bc4"],
+			padding: .2,
+			innerRadius: 17,
+		});
+	});
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks"] = new ApexCharts(document.getElementById('chart-completion-tasks'), {
+			chart: {
+				type: "bar",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [{
+				name: "Tasks completion",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			}],
+			xaxis: {
+				type: 'datetime', 
+			},
+			labels: [...Array(7).keys()].map(n => '2019-09-' + (n + 1)),
+			colors: ["#206bc4"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks2"] = new ApexCharts(document.getElementById('chart-completion-tasks2'), {
+			chart: {
+				type: "line",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "Tasks completion",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			}],
+			xaxis: {
+				type: 'datetime', 
+			},
+			labels: [...Array(7).keys()].map(n => '2019-09-' + (n + 1)),
+			colors: ["#206bc4"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks3"] = new ApexCharts(document.getElementById('chart-completion-tasks3'), {
+			chart: {
+				type: "area",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: .16,
+				type: 'solid'
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "Tasks completion",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			}],
+			xaxis: {
+				type: 'datetime', 
+			},
+			labels: [...Array(7).keys()].map(n => '2019-09-' + (n + 1)),
+			colors: ["#206bc4"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks4"] = new ApexCharts(document.getElementById('chart-completion-tasks4'), {
+			chart: {
+				type: "line",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "straight",
+			},
+			series: [{
+				name: "Tasks completion",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			}],
+			xaxis: {
+				type: 'datetime', 
+			},
+			labels: [...Array(7).keys()].map(n => '2019-09-' + (n + 1)),
+			colors: ["#206bc4"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks5"] = new ApexCharts(document.getElementById('chart-completion-tasks5'), {
+			chart: {
+				type: "line",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "stepline",
+			},
+			series: [{
+				name: "Tasks completion",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			}],
+			xaxis: {
+				type: 'datetime', 
+			},
+			labels: [...Array(7).keys()].map(n => '2019-09-' + (n + 1)),
+			colors: ["#206bc4"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks6"] = new ApexCharts(document.getElementById('chart-completion-tasks6'), {
+			chart: {
+				type: "bar",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			plotOptions: {
+				bar: {
+			 		horizontal: true,
+				}
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [{
+				name: "Tasks completion",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			}],
+			xaxis: {
+				type: 'datetime', 
+			},
+			labels: [...Array(7).keys()].map(n => '2019-09-' + (n + 1)),
+			colors: ["#206bc4"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks7"] = new ApexCharts(document.getElementById('chart-completion-tasks7'), {
+			chart: {
+				type: "line",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			dataLabels: {
+				enabled: true,
+			},
+			fill: {
+				opacity: 1,
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "Tasks completion",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			}],
+			xaxis: {
+				type: 'datetime', 
+			},
+			labels: [...Array(7).keys()].map(n => '2019-09-' + (n + 1)),
+			colors: ["#206bc4"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks8"] = new ApexCharts(document.getElementById('chart-completion-tasks8'), {
+			chart: {
+				type: "bar",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [{
+				name: "",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			},{
+				name: "",
+				data: [113, 42, 65, 54, 76, 65, 35]
+			}],
+			colors: ["#206bc4", "#fa4654"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks9"] = new ApexCharts(document.getElementById('chart-completion-tasks9'), {
+			chart: {
+				type: "bar",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+				stacked: true,
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [{
+				name: "",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			},{
+				name: "",
+				data: [113, 42, 65, 54, 76, 65, 35]
+			}],
+			colors: ["#206bc4", "#fa4654"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks10"] = new ApexCharts(document.getElementById('chart-completion-tasks10'), {
+			chart: {
+				type: "area",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: .16,
+				type: 'solid'
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			},{
+				name: "",
+				data: [113, 42, 65, 54, 76, 65, 35]
+			}],
+			colors: ["#206bc4", "#fa4654"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-completion-tasks11"] = new ApexCharts(document.getElementById('chart-completion-tasks11'), {
+			chart: {
+				type: "area",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+				stacked: true,
+			},
+			fill: {
+				opacity: .16,
+				type: 'solid'
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "",
+				data: [155, 65, 465, 265, 225, 325, 80]
+			},{
+				name: "",
+				data: [113, 42, 65, 54, 76, 65, 35]
+			}],
+			colors: ["#206bc4", "#fa4654"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-total-sales"] = new ApexCharts(document.getElementById('chart-total-sales'), {
+			chart: {
+				type: "donut",
+				fontFamily: 'inherit',
+				height: 240,
+				sparkline: {
+					enabled: true
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [44, 55, 35, 12],
+			labels: ["Direct", "Affilliate", "Sponsored", "E-mail"],
+			colors: ["#206bc4", "#5eba00", "#fa4654", "#fab005"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-tasks"] = new ApexCharts(document.getElementById('chart-tasks'), {
+			chart: {
+				type: "line",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "New",
+				data: [0, 0, 1, 2, 21, 9, 12, 10, 31, 13, 65, 10, 12, 6, 4, 3, 0]
+			},{
+				name: "Completed",
+				data: [0, 0, 1, 2, 7, 5, 6, 8, 24, 7, 12, 5, 6, 3, 2, 2, 0]
+			},{
+				name: "Closed",
+				data: [0, 0, 1, 0, 2, 0, 1, 0, 2, 3, 0, 2, 3, 2, 1, 0, 0]
+			}],
+			xaxis: {
+				categories: ["M", "T", "W", "T", "F", "S", "S", "M", "T", "W", "T", "F", "S", "S", "M", "T", "W"],
+			},
+			colors: ["#206bc4", "#7bd235", "#ff922b"],
+			legend: {
+				show: false,
+			},
+			tooltip: {
+				enabled: false
+			},
+			point: {
+				show: false
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-line-stroke"] = new ApexCharts(document.getElementById('chart-line-stroke'), {
+			chart: {
+				type: "line",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "straight",
+			},
+			series: [{
+				name: "Development",
+				data: [8, 10, 11, 12, 20, 27, 30]
+			},{
+				name: "Marketing",
+				data: [3, 16, 17, 19, 20, 30, 30]
+			},{
+				name: "Sales",
+				data: [7, 10, 11, 18, 18, 18, 24]
+			}],
+			xaxis: {
+				categories: ["2013", "2014", "2015", "2016", "2017", "2018", "2019"],
+			},
+			colors: ["#ff922b", "#206bc4", "#5eba00"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-stepline"] = new ApexCharts(document.getElementById('chart-stepline'), {
+			chart: {
+				type: "line",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "stepline",
+			},
+			series: [{
+				name: "Development",
+				data: [34, 44, 54, 21, 12, 43, 33, 23, 66, 66, 58]
+			}],
+			colors: ["#ff922b"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-temperature"] = new ApexCharts(document.getElementById('chart-temperature'), {
+			chart: {
+				type: "line",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "Tokyo",
+				data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+			},{
+				name: "London",
+				data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+			}],
+			dataLabels: {
+				enabled: true,
+			},
+			xaxis: {
+				categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+			},
+			colors: ["#206bc4", "#5eba00"],
+			legend: {
+				show: false,
+			},
+			markers: {
+				size: 2
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-area"] = new ApexCharts(document.getElementById('chart-area'), {
+			chart: {
+				type: "area",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: .16,
+				type: 'solid'
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "Maximum",
+				data: [11, 8, 15, 18, 19, 17]
+			},{
+				name: "Minimum",
+				data: [7, 7, 5, 7, 9, 12]
+			}],
+			xaxis: {
+				categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+			},
+			colors: ["#206bc4", "#f66d9b"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-area-spline"] = new ApexCharts(document.getElementById('chart-area-spline'), {
+			chart: {
+				type: "area",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: .16,
+				type: 'solid'
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "Maximum",
+				data: [11, 8, 15, 18, 19, 17]
+			},{
+				name: "Minimum",
+				data: [7, 7, 5, 7, 9, 12]
+			}],
+			xaxis: {
+				categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+			},
+			colors: ["#206bc4", "#f66d9b"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-area-spline-stacked"] = new ApexCharts(document.getElementById('chart-area-spline-stacked'), {
+			chart: {
+				type: "area",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+				stacked: true,
+			},
+			fill: {
+				opacity: .16,
+				type: 'solid'
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "Maximum",
+				data: [11, 8, 15, 18, 19, 17]
+			},{
+				name: "Minimum",
+				data: [7, 7, 5, 7, 9, 12]
+			}],
+			xaxis: {
+				categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+			},
+			colors: ["#206bc4", "#f66d9b"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-spline"] = new ApexCharts(document.getElementById('chart-spline'), {
+			chart: {
+				type: "line",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			stroke: {
+				width: 2,
+				lineCap: "round",
+				curve: "smooth",
+			},
+			series: [{
+				name: "Hestavollane",
+				data: [0.2, 0.8, 0.8, 0.8, 1, 1.3, 1.5, 2.9, 1.9, 2.6, 1.6, 3, 4, 3.6, 4.5, 4.2, 4.5, 4.5, 4, 3.1, 2.7, 4, 2.7, 2.3, 2.3, 4.1, 7.7, 7.1, 5.6, 6.1, 5.8, 8.6, 7.2, 9, 10.9, 11.5, 11.6, 11.1, 12, 12.3, 10.7, 9.4, 9.8, 9.6, 9.8, 9.5, 8.5, 7.4, 7.6]
+			},{
+				name: "Vik",
+				data: [0, 0, 0.6, 0.9, 0.8, 0.2, 0, 0, 0, 0.1, 0.6, 0.7, 0.8, 0.6, 0.2, 0, 0.1, 0.3, 0.3, 0, 0.1, 0, 0, 0, 0.2, 0.1, 0, 0.3, 0, 0.1, 0.2, 0.1, 0.3, 0.3, 0, 3.1, 3.1, 2.5, 1.5, 1.9, 2.1, 1, 2.3, 1.9, 1.2, 0.7, 1.3, 0.4, 0.3]
+			}],
+			xaxis: {
+				categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+			},
+			colors: ["#206bc4", "#5eba00"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-scatter"] = new ApexCharts(document.getElementById('chart-scatter'), {
+			chart: {
+				type: "scatter",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [{
+				name: "Maximum",
+				data: [11, 8, 15, 18, 19, 17]
+			},{
+				name: "Minimum",
+				data: [7, 7, 5, 7, 9, 12]
+			}],
+			xaxis: {
+				categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+			},
+			colors: ["#206bc4", "#f66d9b"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-combination"] = new ApexCharts(document.getElementById('chart-combination'), {
+			chart: {
+				type: "bar",
+				fontFamily: 'inherit',
+				height: 240,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [{
+				name: "Development",
+				data: [30, 20, 50, 40, 60, 50]
+			},{
+				name: "Marketing",
+				data: [200, 130, 90, 240, 130, 220]
+			},{
+				name: "Sales",
+				data: [300, 200, 160, 400, 250, 250]
+			},{
+				name: "Sales",
+				data: [200, 130, 90, 240, 130, 220]
+			}],
+			xaxis: {
+				categories: ["2013", "2014", "2015", "2016", "2017", "2018"],
+			},
+			colors: ["#5eba00", "#f66d9b", "#5eba00", "#206bc4"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-tasks-overview"] = new ApexCharts(document.getElementById('chart-tasks-overview'), {
+			chart: {
+				type: "bar",
+				fontFamily: 'inherit',
+				height: 320,
+				parentHeightOffset: 0,
+				toolbar: {
+					show: false,
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [{
+				name: "A",
+				data: [44, 32, 48, 72, 60, 16, 44, 32, 78, 50, 68, 34, 26, 48, 72, 60, 84, 64, 74, 52, 62, 50, 32, 22]
+			}],
+			xaxis: {
+				categories: ["Sprint 1", "Sprint 2", "Sprint 3", "Sprint 4", "Sprint 5", "Sprint 6", "Sprint 7", "Sprint 8", "Sprint 9", "Sprint 10", "Sprint 11", "Sprint 12", "Sprint 13", "Sprint 14", "Sprint 15", "Sprint 16", "Sprint 17", "Sprint 18", "Sprint 19", "Sprint 20", "Sprint 21", "Sprint 22", "Sprint 23", "Sprint 24"],
+			},
+			colors: ["#206bc4"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-total-sales"] = new ApexCharts(document.getElementById('chart-total-sales'), {
+			chart: {
+				type: "donut",
+				fontFamily: 'inherit',
+				height: 240,
+				sparkline: {
+					enabled: true
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [44, 55, 35, 12],
+			labels: ["Direct", "Affilliate", "Sponsored", "E-mail"],
+			colors: ["#206bc4", "#5eba00", "#fa4654", "#fab005"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+<script>
+	// @formatter:off
+	document.addEventListener("DOMContentLoaded", function () {
+		window.tabler_chart = window.tabler_chart || {};
+		window.ApexCharts && (window.tabler_chart["chart-campaigns"] = new ApexCharts(document.getElementById('chart-campaigns'), {
+			chart: {
+				type: "radialBar",
+				fontFamily: 'inherit',
+				height: 240,
+				sparkline: {
+					enabled: true
+				},
+				animations: {
+					enabled: false
+				},
+			},
+			fill: {
+				opacity: 1,
+			},
+			series: [44, 36, 18],
+			labels: ["Total Sent", "Reached", "Opened"],
+			colors: ["#206bc4", "#79a6dc", "#d2e1f3"],
+			legend: {
+				show: false,
+			},
+		})).render();
+	});
+	// @formatter:on
+</script>
+
+
+	
+
+</body>
+</html>
