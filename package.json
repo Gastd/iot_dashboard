@@ -36,11 +36,13 @@
     "js-compile-standalone": "rollup --environment BUNDLE:false --config build/rollup.config.js --sourcemap",
     "js-compile-bundle": "rollup --environment BUNDLE:true --config build/rollup.config.js --sourcemap",
     "svg-svgo": "svgo -f svg/fe --pretty && svgo -f svg/brand --pretty",
-    "unused-files": "node build/unused-files.js"
+    "unused-files": "node build/unused-files.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tabler/tabler.git"
+    "url": "git+https://github.com/gastd/iot_dashboard.git"
   },
   "keywords": [
     "css",
@@ -72,7 +74,7 @@
   "style": "dist/css/tabler.css",
   "sass": "scss/tabler.scss",
   "main": "dist/js/tabler.js",
-  "homepage": "https://tabler.io",
+  "homepage": "http://gastd.github.io/iot_dashboard",
   "devDependencies": {
     "@babel/preset-env": "7.7.7",
     "browser-sync": "2.26.7",
@@ -83,6 +85,7 @@
     "eslint-config-xo": "0.27.2",
     "eslint-plugin-import": "2.19.1",
     "eslint-plugin-unicorn": "15.0.1",
+    "gh-pages": "^2.2.0",
     "glob": "7.1.6",
     "http-server": "0.12.0",
     "icon-font-generator": "2.1.10",

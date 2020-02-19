@@ -25,18 +25,18 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
     <title>Dashboard - Localizador de Carga - </title>
     <!-- Libs CSS -->
-    <link href="./dist/libs/jqvmap/dist/jqvmap.min.css?1578765416" rel="stylesheet"/>
-    <link href="./dist/libs/selectize/dist/css/selectize.css?1578765416" rel="stylesheet"/>
-    <link href="./dist/libs/fullcalendar/core/main.min.css?1578765416" rel="stylesheet"/>
-    <link href="./dist/libs/fullcalendar/daygrid/main.min.css?1578765416" rel="stylesheet"/>
-    <link href="./dist/libs/fullcalendar/timegrid/main.min.css?1578765416" rel="stylesheet"/>
-    <link href="./dist/libs/fullcalendar/list/main.min.css?1578765416" rel="stylesheet"/>
+    <link href="./dist/libs/jqvmap/dist/jqvmap.min.css?1582143445" rel="stylesheet"/>
+    <link href="./dist/libs/selectize/dist/css/selectize.css?1582143445" rel="stylesheet"/>
+    <link href="./dist/libs/fullcalendar/core/main.min.css?1582143445" rel="stylesheet"/>
+    <link href="./dist/libs/fullcalendar/daygrid/main.min.css?1582143445" rel="stylesheet"/>
+    <link href="./dist/libs/fullcalendar/timegrid/main.min.css?1582143445" rel="stylesheet"/>
+    <link href="./dist/libs/fullcalendar/list/main.min.css?1582143445" rel="stylesheet"/>
     <!-- Tabler Core -->
-    <link href="./dist/css/tabler.min.css?1578765416" rel="stylesheet"/>
+    <link href="./dist/css/tabler.min.css?1582143445" rel="stylesheet"/>
     <!-- Tabler Plugins -->
-    <link href="./dist/css/tabler-flags.min.css?1578765416" rel="stylesheet"/>
-    <link href="./dist/css/tabler-payments.min.css?1578765416" rel="stylesheet"/>
-    <link href="./dist/css/tabler-buttons.min.css?1578765416" rel="stylesheet"/>
+    <link href="./dist/css/tabler-flags.min.css?1582143445" rel="stylesheet"/>
+    <link href="./dist/css/tabler-payments.min.css?1582143445" rel="stylesheet"/>
+    <link href="./dist/css/tabler-buttons.min.css?1582143445" rel="stylesheet"/>
   </head>
   <body class="antialiased">
     <div class="wrapper">
@@ -102,12 +102,8 @@
                           // Here we use a predefined layer that will be kept up to date with URL changes
                           layerMapnik = new OpenLayers.Layer.OSM.Mapnik("Mapnik");
                           map.addLayer(layerMapnik);
-                          var transportmap = new  OpenLayers.Layer.OSM.TransportMap("TransportMap",
-                                               ['https://a.tile.thunderforest.com/cycle/${z}/${x}/${y}.png?apikey=<insert-your-apikey-here>',
-                                                'https://b.tile.thunderforest.com/cycle/${z}/${x}/${y}.png?apikey=<insert-your-apikey-here>',
-                                                'https://c.tile.thunderforest.com/cycle/${z}/${x}/${y}.png?apikey=<insert-your-apikey-here>'
-                                               ]
-                            );
+                          var transportmap = new  OpenLayers.Layer.OSM.TransportMap("TransportMap");
+                          map.addLayer(transportmap);
                           layerCycleMap = new OpenLayers.Layer.OSM.CycleMap("CycleMap");
                           map.addLayer(layerCycleMap);
                           layerMarkers = new OpenLayers.Layer.Markers("Markers");
@@ -164,9 +160,9 @@
       </div>
     </div>
     <!-- Libs JS -->
-    <script src="./dist/libs/jquery/dist/jquery.slim.min.js?1578765416"></script>
-    <script src="./dist/libs/bootstrap/dist/js/bootstrap.bundle.min.js?1578765416"></script>
+    <script src="./dist/libs/jquery/dist/jquery.slim.min.js?1582143445"></script>
+    <script src="./dist/libs/bootstrap/dist/js/bootstrap.bundle.min.js?1582143445"></script>
     <!-- Tabler Core -->
-    <script src="./dist/js/tabler.min.js?1578765416"></script>
+    <script src="./dist/js/tabler.min.js?1582143445"></script>
   </body>
 </html>
