@@ -25,18 +25,18 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
     <title>Dashboard - Localizador de Carga - </title>
     <!-- Libs CSS -->
-    <link href="./dist/libs/jqvmap/dist/jqvmap.min.css?1582162960" rel="stylesheet"/>
-    <link href="./dist/libs/selectize/dist/css/selectize.css?1582162960" rel="stylesheet"/>
-    <link href="./dist/libs/fullcalendar/core/main.min.css?1582162960" rel="stylesheet"/>
-    <link href="./dist/libs/fullcalendar/daygrid/main.min.css?1582162960" rel="stylesheet"/>
-    <link href="./dist/libs/fullcalendar/timegrid/main.min.css?1582162960" rel="stylesheet"/>
-    <link href="./dist/libs/fullcalendar/list/main.min.css?1582162960" rel="stylesheet"/>
+    <link href="./dist/libs/jqvmap/dist/jqvmap.min.css?1582171860" rel="stylesheet"/>
+    <link href="./dist/libs/selectize/dist/css/selectize.css?1582171860" rel="stylesheet"/>
+    <link href="./dist/libs/fullcalendar/core/main.min.css?1582171860" rel="stylesheet"/>
+    <link href="./dist/libs/fullcalendar/daygrid/main.min.css?1582171860" rel="stylesheet"/>
+    <link href="./dist/libs/fullcalendar/timegrid/main.min.css?1582171860" rel="stylesheet"/>
+    <link href="./dist/libs/fullcalendar/list/main.min.css?1582171860" rel="stylesheet"/>
     <!-- Tabler Core -->
-    <link href="./dist/css/tabler.min.css?1582162960" rel="stylesheet"/>
+    <link href="./dist/css/tabler.min.css?1582171860" rel="stylesheet"/>
     <!-- Tabler Plugins -->
-    <link href="./dist/css/tabler-flags.min.css?1582162960" rel="stylesheet"/>
-    <link href="./dist/css/tabler-payments.min.css?1582162960" rel="stylesheet"/>
-    <link href="./dist/css/tabler-buttons.min.css?1582162960" rel="stylesheet"/>
+    <link href="./dist/css/tabler-flags.min.css?1582171860" rel="stylesheet"/>
+    <link href="./dist/css/tabler-payments.min.css?1582171860" rel="stylesheet"/>
+    <link href="./dist/css/tabler-buttons.min.css?1582171860" rel="stylesheet"/>
   </head>
   <body class="antialiased">
     <div class="wrapper">
@@ -78,10 +78,11 @@
                   <!-- <title>OpenLayers Simplest Example</title> -->
                   <body onload="init();">
                     <div id="map-world" style="height:100%; width:100%;"></div>
-                    <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+                    <script src="https://www.openlayers.org/api/OpenLayers.js"></script>
                     <script src="https://www.openstreetmap.org/openlayers/OpenStreetMap.js"></script>
                     <script>
                       var map; //complex object of type OpenLayers.Map
+                      var layerMarkers;
                       
                       function init() {
                           map = new OpenLayers.Map ("map-world", {
@@ -110,10 +111,10 @@
                           map.addLayer(layerMarkers);
                       
                           // Add the Layer with the GPX Track
-                          var lgpx = new OpenLayers.Layer.Vector("Lakeside cycle ride", {
+                          var lgpx_node1 = new OpenLayers.Layer.Vector("First train", {
                               strategies: [new OpenLayers.Strategy.Fixed()],
                               protocol: new OpenLayers.Protocol.HTTP({
-                                  url: "exploration.kml",
+                                  url: "node1.kml",
                                   format: new OpenLayers.Format.KML({
                                               extractStyles: true,
                                               extractAttributes: true
@@ -122,13 +123,25 @@
                               style: {strokeColor: "green", strokeWidth: 5, strokeOpacity: 0.75},
                               projection: new OpenLayers.Projection("EPSG:4326")
                           });
-                          map.addLayer(lgpx);
+                          var lgpx_node2 = new OpenLayers.Layer.Vector("Second train", {
+                              strategies: [new OpenLayers.Strategy.Fixed()],
+                              protocol: new OpenLayers.Protocol.HTTP({
+                                  url: "node2.kml",
+                                  format: new OpenLayers.Format.KML({
+                                              extractStyles: true,
+                                              extractAttributes: true
+                                      }),
+                              }),
+                              style: {strokeColor: "blue", strokeWidth: 5, strokeOpacity: 0.75},
+                              projection: new OpenLayers.Projection("EPSG:4326")
+                          });
+                          map.addLayer(lgpx_node1);
+                          // map.addLayer(lgpx_node2);
                       
                           // Add a Layer with Marker
                           var size = new OpenLayers.Size(21, 25);
                           var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
                           var icon1 = new OpenLayers.Icon('https://www.openstreetmap.org/openlayers/img/marker.png',size,offset);
-                          var icon2 = new OpenLayers.Icon('https://www.openstreetmap.org/openlayers/img/marker.png',size,offset);
                       
                           // Start position for the map (hardcoded here for simplicity,
                           // but maybe you want to get this from the URL params)
@@ -139,17 +152,53 @@
                           map.setCenter(lonLat, zoom);
                       
                           // begin
-                          var lat1=-23.98621333420948;
-                          var lon1=-46.26471449151783;
+                          var lat1=-23.912734;
+                          var lon1=-46.228116;
                           var lonLat1 = new OpenLayers.LonLat(lon1, lat1).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
                           layerMarkers.addMarker(new OpenLayers.Marker(lonLat1,icon1));
+                      }
+                      
+                      function printMarker()
+                      {
+                          var fs = readTextFile("node1.txt");
+                          var size = new OpenLayers.Size(21, 25);
+                          var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+                          var icon2 = new OpenLayers.Icon('https://www.openstreetmap.org/openlayers/img/marker.png',size,offset);
+                      
+                          console.log(fs)
+                          var textByLine = fs.split("\n");
+                          console.log(textByLine[0])
+                          var latlon = textByLine[0].split(",");
+                          console.log(latlon[0])
+                          console.log(latlon[1])
                       
                           // end
-                          var lat2=-23.80898400476298;
-                          var lon2=-46.09552471690758;
+                          var lat2= latlon[1];
+                          var lon2= latlon[0];
                           var lonLat2 = new OpenLayers.LonLat(lon2, lat2).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
                           layerMarkers.addMarker(new OpenLayers.Marker(lonLat2,icon2));
                       }
+                      
+                      function readTextFile(file)
+                      {
+                          var rawFile = new XMLHttpRequest();
+                          rawFile.open("GET", file, false);
+                          rawFile.onreadystatechange = function ()
+                          {
+                              if(rawFile.readyState === 4)
+                              {
+                                  if(rawFile.status === 200 || rawFile.status == 0)
+                                  {
+                                      var allText = rawFile.responseText;
+                                      // alert(allText);
+                                  }
+                              }
+                          }
+                          rawFile.send(null);
+                          return rawFile.responseText;
+                      }
+                      
+                      window.setInterval(printMarker, 5000);
                     </script>
                   </body>
                 </div>
@@ -160,9 +209,9 @@
       </div>
     </div>
     <!-- Libs JS -->
-    <script src="./dist/libs/jquery/dist/jquery.slim.min.js?1582162960"></script>
-    <script src="./dist/libs/bootstrap/dist/js/bootstrap.bundle.min.js?1582162960"></script>
+    <script src="./dist/libs/jquery/dist/jquery.slim.min.js?1582171860"></script>
+    <script src="./dist/libs/bootstrap/dist/js/bootstrap.bundle.min.js?1582171860"></script>
     <!-- Tabler Core -->
-    <script src="./dist/js/tabler.min.js?1582162960"></script>
+    <script src="./dist/js/tabler.min.js?1582171860"></script>
   </body>
 </html>
