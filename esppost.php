@@ -1,6 +1,6 @@
 <?php
-    $Temp = $_POST["temperature"];
-    $Humidity = $_POST["humidity"];
-    $Write = "<p>Temperature : " . $Temp . " Celsius </p>" . "<p>Humidity : " . $Humidity . " % </p>";
-    file_put_contents('sensor.html', $Write);
+    $lat = $_POST["lat"];
+    $lon = $_POST["lon"];
+    $Write = $lat . "," . $lon . "\n";
+    file_put_contents('node1.txt', $Write);
 ?>
