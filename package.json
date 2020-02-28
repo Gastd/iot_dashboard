@@ -38,7 +38,7 @@
     "svg-svgo": "svgo -f svg/fe --pretty && svgo -f svg/brand --pretty",
     "unused-files": "node build/unused-files.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d demo"
   },
   "repository": {
     "type": "git",

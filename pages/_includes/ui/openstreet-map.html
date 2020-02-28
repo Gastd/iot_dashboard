@@ -7,10 +7,11 @@
 <!-- <title>OpenLayers Simplest Example</title> -->
 <body onload="init();">
     <div id="map-{{ id }}" style="height:100%; width:100%;"></div>
-    <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+    <script src="https://www.openlayers.org/api/OpenLayers.js"></script>
     <script src="https://www.openstreetmap.org/openlayers/OpenStreetMap.js"></script>
     <script>
         var map; //complex object of type OpenLayers.Map
+        var layerMarkers;
 
         function init() {
             map = new OpenLayers.Map ("map-{{ id }}", {
@@ -39,45 +40,124 @@
             map.addLayer(layerMarkers);
 
             // Add the Layer with the GPX Track
-            var lgpx = new OpenLayers.Layer.Vector("Lakeside cycle ride", {
-                strategies: [new OpenLayers.Strategy.Fixed()],
-                protocol: new OpenLayers.Protocol.HTTP({
-                    url: "exploration.kml",
-                    format: new OpenLayers.Format.KML({
-                                extractStyles: true, 
-                                extractAttributes: true
-                        }),
-                }),
-                style: {strokeColor: "green", strokeWidth: 5, strokeOpacity: 0.75},
-                projection: new OpenLayers.Projection("EPSG:4326")
-            });
-            map.addLayer(lgpx);
+            // var lgpx_node1 = new OpenLayers.Layer.Vector("First train", {
+            //     strategies: [new OpenLayers.Strategy.Fixed()],
+            //     protocol: new OpenLayers.Protocol.HTTP({
+            //         url: "node1.kml",
+            //         format: new OpenLayers.Format.KML({
+            //                     extractStyles: true, 
+            //                     extractAttributes: true
+            //             }),
+            //     }),
+            //     style: {strokeColor: "green", strokeWidth: 5, strokeOpacity: 0.75},
+            //     projection: new OpenLayers.Projection("EPSG:4326")
+            // });
+            // var lgpx_node2 = new OpenLayers.Layer.Vector("Second train", {
+            //     strategies: [new OpenLayers.Strategy.Fixed()],
+            //     protocol: new OpenLayers.Protocol.HTTP({
+            //         url: "node2.kml",
+            //         format: new OpenLayers.Format.KML({
+            //                     extractStyles: true, 
+            //                     extractAttributes: true
+            //             }),
+            //     }),
+            //     style: {strokeColor: "blue", strokeWidth: 5, strokeOpacity: 0.75},
+            //     projection: new OpenLayers.Projection("EPSG:4326")
+            // });
+            // map.addLayer(lgpx_node1);
+            // map.addLayer(lgpx_node2);
 
             // Add a Layer with Marker
+            var fs = readTextFile("node1.txt");
             var size = new OpenLayers.Size(21, 25);
             var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
-            var icon1 = new OpenLayers.Icon('https://www.openstreetmap.org/openlayers/img/marker.png',size,offset);
-            var icon2 = new OpenLayers.Icon('https://www.openstreetmap.org/openlayers/img/marker.png',size,offset);
+            var icon = new OpenLayers.Icon('https://www.openstreetmap.org/openlayers/img/marker.png',size,offset);
 
-            // Start position for the map (hardcoded here for simplicity,
-            // but maybe you want to get this from the URL params)
-            var lat=-23.912734;
-            var lon=-46.228116;
+            console.log(fs)
+            var textByLine = fs.split("\n");
+            // console.log(textByLine[0])
+            var latlon = textByLine[0].split(",");
+            // console.log(latlon[0])
+            // console.log(latlon[1])
+
+            // end
+            var lat= latlon[1];
+            var lon= latlon[0];
             var zoom=11;
             var lonLat = new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
             map.setCenter(lonLat, zoom);
+            // layerMarkers.addMarker(new OpenLayers.Marker(lonLat,icon));
             
-            // begin
-            var lat1=-23.98621333420948;
-            var lon1=-46.26471449151783;
+            // // Start position for the map (hardcoded here for simplicity,
+            // // but maybe you want to get this from the URL params)
+            // var lat=-23.912734;
+            // var lon=-46.228116;
+            // var lonLat = new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
+            
+            // // begin
+            var lat1= latlon[1];
+            var lon1= latlon[0];
             var lonLat1 = new OpenLayers.LonLat(lon1, lat1).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
-            layerMarkers.addMarker(new OpenLayers.Marker(lonLat1,icon1));
-            
+            layerMarkers.addMarker(new OpenLayers.Marker(lonLat1,icon));
+        }
+
+        function printMarker()
+        {
+            layerMarkers.clearMarkers();
+            var fs = readTextFile("node1.txt");
+            var size = new OpenLayers.Size(21, 25);
+            var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+            var icon = new OpenLayers.Icon('https://www.openstreetmap.org/openlayers/img/marker.png',size,offset);
+
+            console.log(fs)
+            var textByLine = fs.split("\n");
+            // console.log(textByLine[0])
+            var latlon = textByLine[0].split(",");
+            // console.log(latlon[0])
+            // console.log(latlon[1])
+
             // end
-            var lat2=-23.80898400476298;
-            var lon2=-46.09552471690758;
+            var lat= latlon[1];
+            var lon= latlon[0];
+            var lonLat = new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
+            layerMarkers.addMarker(new OpenLayers.Marker(lonLat,icon));
+
+            var fs2 = readTextFile("node2.txt");
+            var icon2 = new OpenLayers.Icon('https://www.openstreetmap.org/openlayers/img/marker.png',size,offset);
+
+            console.log(fs2)
+            var textByLine2 = fs2.split("\n");
+            // console.log(textByLine2[0])
+            var latlon2 = textByLine2[0].split(",");
+            // console.log(latlon2[0])
+            // console.log(latlon2[1])
+
+            // end
+            var lat2= latlon2[1];
+            var lon2= latlon2[0];
             var lonLat2 = new OpenLayers.LonLat(lon2, lat2).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
             layerMarkers.addMarker(new OpenLayers.Marker(lonLat2,icon2));
         }
+
+        function readTextFile(file)
+        {
+            var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", file, false);
+            rawFile.onreadystatechange = function ()
+            {
+                if(rawFile.readyState === 4)
+                {
+                    if(rawFile.status === 200 || rawFile.status == 0)
+                    {
+                        var allText = rawFile.responseText;
+                        // alert(allText);
+                    }
+                }
+            }
+            rawFile.send(null);
+            return rawFile.responseText;
+        }
+
+        window.setInterval(printMarker, 30000);
     </script>
 </body>
