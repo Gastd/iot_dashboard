@@ -18,4 +18,5 @@ f = write("<p>Temperature : " + temperature + " Celsius </p>" +
      "<p>Humidity : " + humidity + " % </p>")
 
 f.close()
+#    http://localizer-train.000webhostapp.com/
 #    MJ26e#6#fQ8x
