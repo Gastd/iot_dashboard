@@ -4,5 +4,5 @@
     $lon = $_POST["lon"];
     $Write = $lat . "," . $lon . "\n";
     $file_name = "node" . $node . ".txt";
-    file_put_contents(file_name, $Write);
+    file_put_contents($file_name, $Write);
 ?>
