@@ -219,6 +219,7 @@
                       {
                           var rawFile = new XMLHttpRequest();
                           rawFile.open("GET", file, false);
+                          rawFile.setRequestHeader('Cache-Control', 'no-cache');
                           rawFile.onreadystatechange = function ()
                           {
                               if(rawFile.readyState === 4)
