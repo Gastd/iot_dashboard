@@ -218,8 +218,8 @@
                       function readTextFile(file)
                       {
                           var rawFile = new XMLHttpRequest();
-                          rawFile.open("GET", file, false);
-                        //rawFile.open("GET", file + '?_=' + new Date().getTime(), false);
+                          //rawFile.open("GET", file, false);
+                          rawFile.open("GET", file + '?_=' + new Date().getTime(), false);
                           rawFile.setRequestHeader('Cache-Control', 'no-cache');
                           rawFile.setRequestHeader('cache-control', 'no-cache, must-revalidate, post-check=0, pre-check=0');
                           rawFile.setRequestHeader('cache-control', 'max-age=0');
