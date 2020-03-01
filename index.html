@@ -221,11 +221,11 @@
                           rawFile.open("GET", file, false);
                         //rawFile.open("GET", file + '?_=' + new Date().getTime(), false);
                           rawFile.setRequestHeader('Cache-Control', 'no-cache');
-                          xhr.setRequestHeader('cache-control', 'no-cache, must-revalidate, post-check=0, pre-check=0');
-                          xhr.setRequestHeader('cache-control', 'max-age=0');
-                          xhr.setRequestHeader('expires', '0');
-                          xhr.setRequestHeader('expires', 'Tue, 01 Jan 1980 1:00:00 GMT');
-                          xhr.setRequestHeader('pragma', 'no-cache');
+                          rawFile.setRequestHeader('cache-control', 'no-cache, must-revalidate, post-check=0, pre-check=0');
+                          rawFile.setRequestHeader('cache-control', 'max-age=0');
+                          rawFile.setRequestHeader('expires', '0');
+                          rawFile.setRequestHeader('expires', 'Tue, 01 Jan 1980 1:00:00 GMT');
+                          rawFile.setRequestHeader('pragma', 'no-cache');
                           rawFile.onreadystatechange = function ()
                           {
                               if(rawFile.readyState === 4)
